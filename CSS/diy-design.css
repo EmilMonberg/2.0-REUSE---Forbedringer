@@ -1,0 +1,1102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@font-face {
+    font-family: 'Overskrift';
+    src: url('../Fonts/Loew-Heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tekst';
+    src: url('../Fonts/Loew-Regular.otf') format('opentype');
+}
+
+/* Keyframes */
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    height: 100%;
+    max-width: 100%;
+}
+
+/*------------- Navigations styling slut ----------------- */
+
+.topnav {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.topnav a img {
+    width: 120px;
+}
+
+.topnav #myLinks {
+    display: none;
+    text-transform: uppercase;
+}
+
+.topnav #myLinks a {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.topnav a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    font-family: overskrift;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    font-size: 40px;
+    right: 0;
+    top: 0;
+    border-bottom: none;
+}
+
+.topnav div a:hover {
+    background-color: #074f4b;
+}
+
+.active {
+    background-color: rgba(0, 0, 0, .0);
+    color: white;
+}
+
+nav {
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: .8s;
+    z-index: 999999;
+
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+}
+
+/*------------- Navigations styling slut ----------------- */
+
+/*------------- Navigations styling med scroll effekt ----------------- */
+
+nav.menu_baggrund {
+    background: rgba(0, 0, 0, .8);
+    padding: 5px 0px;
+}
+
+
+nav.menu_baggrund ul li a {
+    color: white;
+}
+
+nav ul {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 2px;
+}
+
+nav ul li .tt {
+    font-size: 20px;
+    line-height: 80px;
+    color: #262626;
+    padding: 5px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    font-family: Overskrift;
+}
+
+nav ul li img {
+    line-height: 20px;
+}
+
+nav.menu_baggrund nav ul li a {
+    color: #fff;
+}
+
+nav ul li .tt.active {
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li .tt:hover {
+
+    color: #fff;
+    background: rgba(0, 0, 0, .8);
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+}
+
+nav.menu_baggrund ul li .tt.active,
+nav.menu_baggrund ul li .tt:hover {
+    color: #fff;
+    background: #008f8a;
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+    border: 1px solid #fff;
+}
+
+nav.menu_baggrund ul li img {
+    margin-bottom: -100px;
+}
+
+.lille_logo {
+    width: 110px;
+    padding: 10px 30px;
+    transition: 0.8s;
+
+}
+
+.lille_logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 1%;
+    display: none;
+    background: rgba(0, 0, 0, .8);
+    margin-top: -18px;
+    font-size: 12px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav ul li ul li {
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+nav ul li ul li a {
+    color: #fff;
+    font-family: Overskrift;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li:hover > ul,
+nav ul li ul:hover {
+    position: relative;
+    display: block;
+    color: #fff;
+}
+
+nav ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+nav.menu_baggrund ul li ul {
+    background-color: rgb(0, 143, 138);
+    left: 1%;
+    margin-top: -18px;
+    font-size: 15px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav.menu_baggrund ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/*------------- Navigations styling med scroll effekt slut----------------- */
+
+/*---------------------Indhold------------------------*/
+
+body {
+    overflow-x: hidden;
+}
+
+.section1 {
+    background: url(../Billeder/taenke-boks.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+    width: 100%;
+    height: 75vh;
+}
+
+h1 {
+    font-family: Overskrift;
+    color: white;
+    font-size: 4vw;
+    margin-top: 5%;
+}
+
+h2 {
+    font-family: Overskrift;
+}
+
+.hammer-image {
+    position: absolute;
+    z-index: 300;
+    width: 200px;
+    height: 200px;
+    right: 10%;
+    top: 20%;
+    transform: rotate(15deg);
+}
+
+.DIY {
+    width: 100%;
+    z-index: 1000;
+    padding-bottom: 5%;
+    position: relative;
+    background-color: #008f8a;
+    overflow: hidden;
+
+}
+
+.DIY_tekst {
+    position: relative;
+    max-width: 60%;
+    top: 10%;
+    left: 10%;
+}
+
+.DIY h1 {
+    color: #fff;
+    font-family: overskrift;
+    font-size: 3vw;
+    letter-spacing: 2px;
+}
+
+.DIY p {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-family: Tekst;
+    line-height: 40px;
+}
+
+/*--------------------------GRID INDHOLD ----------------------*/
+
+.indhold {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "sek1 sek2 sek3"
+        "sek4 sek5 sek6"
+        "sek7 sek8 sek9"
+        "sek10 sek11 sek12";
+    width: 100%;
+    background-color: #008f8a;
+}
+
+.sek1:hover {
+    transform: scale(1.02);
+}
+
+.sek2:hover {
+    transform: scale(1.02);
+}
+
+.sek3:hover {
+    transform: scale(1.02);
+}
+
+.sek4:hover {
+    transform: scale(1.02);
+}
+
+.sek5:hover {
+    transform: scale(1.02);
+}
+
+.sek6:hover {
+    transform: scale(1.02);
+}
+
+.sek7:hover {
+    transform: scale(1.02);
+}
+
+.sek8:hover {
+    transform: scale(1.02);
+}
+
+.sek9:hover {
+    transform: scale(1.02);
+}
+
+.sek10:hover {
+    transform: scale(1.02);
+}
+
+.sek11:hover {
+    transform: scale(1.02);
+}
+
+.sek12:hover {
+    transform: scale(1.02);
+}
+
+
+/* ----------- Sektion 1 / Palle-sofa ----------*/
+.sek1 {
+    grid-area: sek1;
+    width: 30vw;
+    max-width: 100%;
+    height: 20vw;
+    margin-left: 7.5%;
+    transition: .5s;
+}
+
+/* -------------- Sektion 2 / Byg din egen lampe ------------*/
+.sek2 {
+    grid-area: sek2;
+    width: 33vw;
+    max-width: 100%;
+    height: 22vw;
+    margin-left: 2.5%;
+    background-color: #074f4b;
+    transition: .5s;
+}
+
+.lampe {
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 2vw;
+}
+
+.lb {
+    display: block;
+    width: 10vw;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* -------------- Sektion 3 / Palle-bænk --------------*/
+.sek3 {
+    grid-area: sek3;
+    width: 25vw;
+    margin-left: -7.5%;
+    max-width: 100%;
+    height: 16vw;
+    transition: .5s;
+}
+
+/* --------------- Sektion 4 / Plante dekoration-------------*/
+.sek4 {
+    grid-area: sek4;
+    width: 27vw;
+    max-width: 100%;
+    height: 20vw;
+    margin-top: 5%;
+    margin-left: 7.5%;
+    transition: .5s;
+}
+
+.plante-div {
+    color: white;
+    z-index: 800;
+    max-width: 100%;
+    margin-top: 7vw;
+    margin-left: 5vw;
+    font-size: 1.5vw;
+    font-family: Tekst;
+}
+
+.plante-t {
+    margin-top: 6vw;
+    margin-right: 3vw;
+    background-color: rgb(7, 79, 75, 0.5);
+    font-size: 1.5vw;
+}
+
+/* ------------- Sektion 5 / Krokodille ---------*/
+.sek5 {
+    grid-area: sek5;
+    width: 37vw;
+    max-width: 100%;
+    height: 23vw;
+    margin-top: 5%;
+    margin-left: 0;
+    transition: .5s;
+}
+
+/* --------------- Sektion 6 / Skateboard-guitar ----*/
+.sek6 {
+    grid-area: sek6;
+    width: 18.7vw;
+    height: 30vw;
+    max-width: 100%;
+    margin-top: -10%;
+    margin-left: 13.5%;
+    transition: .5s;
+}
+
+/* ----------- Sektion 7 / Bænk med stålkant --------*/
+.sek7 {
+    grid-area: sek7;
+    width: 23vw;
+    max-width: 100%;
+    height: 30vw;
+    margin-top: -5%;
+    margin-left: 7.5%;
+    margin-right: 10%;
+    transition: .5s;
+}
+
+/* ------------- Sektion 8 / Instagram reklame -------*/
+.sek8 {
+    grid-area: sek8;
+    width: 37vw;
+    max-width: 100%;
+    height: 18vw;
+    margin-top: 3%;
+    margin-left: -5%;
+    background-color: #156A5A;
+    transition: .5s;
+}
+
+.mb_overskrift {
+    font-family: Overskrift;
+    text-align: center;
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-size: 2vw;
+}
+
+.mbt {
+    font-family: Tekst;
+    color: white;
+    font-size: 2vw;
+    margin-left: 0;
+}
+
+.mb-t {
+    font-family: Tekst;
+    color: white;
+    font-size: 2vw;
+    margin-left: 11.5%;
+}
+
+.mb {
+    display: block;
+    transform: rotate(15deg);
+    width: 7vw;
+    max-width: 100%;
+    margin-top: -22%;
+    margin-left: 70%;
+}
+
+/* ------------ Sektion 9 / DIY træfugle ----------*/
+.sek9 {
+    grid-area: sek9;
+    width: 21.9vw;
+    max-width: 100%;
+    height: 30vw;
+    margin-top: 10%;
+    margin-left: 3%;
+    transition: .5s;
+}
+
+.fugle-t {
+    margin-top: 2vw;
+    margin-left: 0;
+    margin-right: 2vw;
+    padding: 10px;
+    background-color: rgb(7, 79, 75, 0.5);
+    font-size: 2vw;
+    font-family: Overskrift;
+}
+
+/* ----------- Sektion 10 ----------- */
+.sek10 {
+    grid-area: sek10;
+    width: 20vw;
+    max-width: 100%;
+    height: 20vw;
+    margin-left: 5%;
+    transition: .5s;
+}
+
+/* ------------ Sektion 11 / Tricks til affaldssortering --*/
+.sek11 {
+    grid-area: sek11;
+    width: 35vw;
+    max-width: 100%;
+    height: 25vw;
+    margin-bottom: 20%;
+    margin-top: -28%;
+    transition: .5s;
+}
+
+.recycle-t {
+    margin-top: 11vw;
+    margin-left: -2vw;
+    margin-right: 8vw;
+    padding: 10px;
+    background-color: rgb(7, 79, 75, 0.7);
+    font-size: 1.5vw;
+    font-family: Tekst;
+}
+
+/*--- Sektioner slut ----*/
+
+.skygge {
+    box-shadow: 0 10px 10px rgba(0.2, 0.2, 0.2, 0.2);
+}
+
+/* -------- Tekstbokse på billeder ----*/
+.sofa-t {
+    margin-top: -20%;
+    margin-right: 50%;
+    margin-left: -7.9%;
+    padding: 10px;
+    background-color: rgb(7, 79, 75, 0.5);
+    font-size: 2vw;
+    font-family: Overskrift;
+}
+
+.ude-t {
+    margin-top: -23%;
+    margin-right: 60%;
+    margin-left: -29%;
+    padding: 10px;
+    background-color: rgb(7, 79, 75, 0.5);
+    font-size: 1.5vw;
+    font-family: Overskrift;
+}
+
+.skate-t {
+    margin-top: 5%;
+    margin-right: 40%;
+    margin-left: 0%;
+    padding: 10px;
+    background-color: rgb(7, 79, 75, 0.5);
+    font-size: 1.5vw;
+    font-family: Overskrift;
+}
+
+.krok-t {
+    margin-top: 3%;
+    margin-right: 50%;
+    margin-left: 0%;
+    padding: 10px;
+    background-color: rgb(7, 79, 75, 0.5);
+    font-size: 1.5vw;
+    font-family: Overskrift;
+}
+
+.baenk-t {
+    margin-top: 2vw;
+    margin-right: 50%;
+    margin-left: 0%;
+    padding: 10px;
+    background-color: rgb(7, 79, 75, 0.5);
+    font-size: 1.5vw;
+    font-family: Overskrift;
+}
+
+/* -------- Tekstbokse på billeder slut ----*/
+
+
+/*-----------------------------FOOTER--------------------------------*/
+
+
+footer {
+    min-height: 450px;
+    background-color: #262626;
+    color: #fff;
+    width: 100%;
+    font-family: tekst;
+}
+
+.some {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.some div {
+    display: flex;
+    background-color: #074f4b;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    margin: 50px;
+}
+
+.some a {
+    position: relative;
+    top: 15%;
+    text-decoration: none;
+    color: #262626;
+    font-size: 50px;
+}
+
+.some i {
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.info div {
+    width: 320px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.info h2 {
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-family: Overskrift;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.info p {
+    letter-spacing: 1px;
+}
+
+.copyright {
+    text-align: center;
+    font-family: Overskrift;
+    font-size: 20px;
+    padding: 5px;
+    letter-spacing: 5px;
+}
+
+/*-------------------------------------------MEDIA QUERY-----------------------------------*/
+
+@media (max-width: 1010px) {
+
+    nav {
+        display: none;
+    }
+
+    .topnav {
+        display: block;
+        z-index: 999999;
+    }
+
+    .hammer-image {
+        position: absolute;
+        z-index: 300;
+        width: 200px;
+        height: 200px;
+        right: 5%;
+        top: 20%;
+        transform: rotate(15deg);
+    }
+}
+
+
+/* ------------------- MEDIA QUARIES -----------------*/
+
+/* ------------- Mobil version ------------- */
+@media only screen and (max-width: 650px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+    .section1 {
+        height: 300px;
+    }
+
+    .hammer-image {
+        display: none;
+    }
+
+    .DIY {
+        width: 100%;
+        z-index: 1000;
+        padding-bottom: 0%;
+        position: relative;
+        background-color: #008f8a;
+        overflow: hidden;
+
+    }
+
+    .DIY_tekst {
+        position: relative;
+        max-width: 100%;
+        top: 0%;
+        left: 0%;
+        padding: 20px;
+    }
+
+    .DIY h1 {
+        font-family: Overskrift;
+        color: white;
+        font-size: 5vw;
+    }
+
+    .DIY p {
+        color: #fff;
+        margin-left: 0;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Tekst;
+        text-align: left;
+        line-height: 20px;
+    }
+
+    .hammer-image {
+        position: absolute;
+        z-index: 300;
+        width: 70px;
+        height: 90px;
+        right: 15%;
+        top: 15%;
+        transform: rotate(15deg);
+    }
+
+    /* ---------- Grid ----------- */
+    .indhold {
+        display: grid;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "sek1"
+            "sek2"
+            "sek3"
+            "sek4"
+            "sek5"
+            "sek6"
+            "sek7"
+            "sek8"
+            "sek9"
+            "sek10"
+            "sek11"
+            "sek12";
+        width: 115%;
+        background-color: black;
+    }
+
+    /* ------ Sektion 1 / Palle-sofa ------*/
+    .sek1 {
+        margin-top: 2%;
+        margin-left: -10%;
+        grid-area: sek1;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 0;
+        ;
+    }
+
+    .sofa-t {
+        margin-top: 8%;
+        margin-right: 50%;
+        margin-left: 9%;
+        padding: 10px;
+        background-color: rgb(7, 79, 75, 0.5);
+        font-size: 25px;
+        font-family: Overskrift;
+    }
+
+    .sek2 {
+        display: none;
+    }
+
+    .ude-t {
+        margin-top: 8%;
+        margin-right: 50%;
+        margin-left: -5%;
+        padding: 10px;
+        background-color: rgb(7, 79, 75, 0.5);
+        font-size: 25px;
+        font-family: Overskrift;
+    }
+
+    /* -------- Sektion 3 / Udendørs pallebænk ----- */
+    .sek3 {
+        margin-top: 2%;
+        grid-area: sek3;
+        width: 100%;
+        height: 300px;
+    }
+
+    /* --------- Sektion 4 / Plantedekoration ------*/
+    .sek4 {
+        grid-area: sek4;
+        margin-left: -10%;
+        width: 110%;
+        height: 300px;
+        margin-top: 2%;
+    }
+
+    .plante-div {
+        color: white;
+        z-index: 800;
+        margin-top: 0vw;
+        font-family: Tekst;
+    }
+
+    .plante-t {
+        margin-top: 8%;
+        margin-right: 50%;
+        margin-left: 10%;
+        padding: 10px;
+        background-color: rgb(7, 79, 75, 0.5);
+        font-size: 15px;
+        font-family: tekst;
+    }
+
+    /* ------ Sektion 5 / krokodille ------ */
+    .sek5 {
+        grid-area: sek5;
+        margin-left: 0;
+        width: 100%;
+        height: 300px;
+        margin-top: 2%;
+    }
+
+    .krok-t {
+        margin-top: 8%;
+        margin-right: 60%;
+        margin-left: 0;
+        padding: 10px;
+        background-color: rgb(7, 79, 75, 0.5);
+        font-size: 25px;
+        font-family: Overskrift;
+    }
+
+    /* ------ Sektion 6 / Skateboard-guitar -----*/
+    .sek6 {
+        grid-area: sek6;
+        margin-left: 0;
+        width: 100%;
+        height: 400px;
+        margin-top: 2%;
+    }
+
+    .skate-t {
+        margin-top: 8%;
+        margin-right: 60%;
+        margin-left: 0;
+        padding: 10px;
+        background-color: rgb(7, 79, 75, 0.5);
+        font-size: 25px;
+        font-family: Overskrift;
+    }
+
+    /* ----- Sektion 7 / bænk med stålkant --- */
+    .sek7 {
+        grid-area: sek7;
+        margin-left: 0;
+        width: 100%;
+        height: 400px;
+        margin-top: 2%;
+    }
+
+    .baenk-t {
+        margin-top: 8%;
+        margin-right: 60%;
+        margin-left: 0;
+        padding: 10px;
+        background-color: rgb(7, 79, 75, 0.5);
+        font-size: 25px;
+        font-family: Overskrift;
+    }
+
+    /* -------- Sektion 8 / Instagram reklame -------- */
+    .sek8 {
+        grid-area: sek8;
+        margin-left: 0;
+        width: 100%;
+        height: 160px;
+        margin-top: 2%;
+        background-color: #156A5A;
+    }
+
+    .mb_overskrift {
+        font-family: Overskrift;
+        text-align: center;
+        color: white;
+        margin-top: 2%;
+        margin-bottom: 5%;
+        margin-right: 14%;
+        font-size: 20px;
+    }
+
+    .mbt {
+        font-family: Tekst;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        margin-left: -25%;
+    }
+
+    .mb-t {
+        width: 60%;
+        font-size: 20px;
+        text-align: center;
+        margin-right: 220px;
+    }
+
+    .mb {
+        display: block;
+        transform: rotate(15deg);
+        width: 60px;
+        margin-top: -23vw;
+        margin-left: 70%;
+    }
+
+    /* -------- Sektion 9 / DIY Træfugle ---------- */
+    .sek9 {
+        grid-area: sek9;
+        margin-left: 0;
+        width: 100%;
+        height: 400px;
+        margin-top: 2%;
+    }
+
+    .fugle-t {
+        margin-top: 9vw;
+        margin-right: 32%;
+        padding: 10px;
+        background-color: rgb(7, 79, 75, 0.5);
+        font-size: 25px;
+        font-family: Overskrift;
+    }
+
+    /* ---------- Sektion 10 ------ */
+    .sek10 {
+        grid-area: sek10;
+        width: 20vw;
+        height: 20vw;
+        margin-left: 5%;
+    }
+
+    /* -------- Sektion 11 / Affaldssortering ------ */
+    .sek11 {
+        grid-area: sek11;
+        margin-left: -10%;
+        width: 110%;
+        height: 300px;
+        margin-top: 2%;
+        margin-bottom: 0;
+    }
+
+    .recycle-t {
+        margin-top: 9vw;
+        margin-right: 8vw;
+        margin-left: 13%;
+        padding: 10px;
+        background-color: rgb(7, 79, 75, 0.7);
+        font-size: 15px;
+        font-family: Tekst;
+    }
+
+    /* --------- Sektion 12 --------- */
+    .sek12 {
+        grid-area: sek12;
+        width: 20vw;
+        height: 20vw;
+        margin-left: 5%;
+    }
+
+    /* ---- Footer ------*/
+    .some {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .some a {
+        position: relative;
+        top: 0;
+        text-decoration: none;
+        color: #262626;
+        font-size: 35px;
+    }
+
+    .some div {
+        display: flex;
+        background-color: #074f4b;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        margin: 15px;
+        margin-top: 80px;
+
+    }
+
+}

@@ -1,0 +1,1569 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/*------------------------ Fonts ---------------------------*/
+
+@font-face {
+    font-family: 'Overskrift';
+    src: url('../Fonts/Loew-Heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tekst';
+    src: url('../Fonts/Loew-Regular.otf') format('opentype');
+}
+
+/*-------------------- Keyframes ---------------------------*/
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+
+    /*------------------ Firefox ------------------------ */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    /*-------------- Safari og Chrome -------------------*/
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+
+    /*--------------------- Opera -----------------------*/
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes bounce {
+    0% {
+        top: 87%;
+    }
+
+    50% {
+        top: 90%;
+    }
+
+    100% {
+        top: 87%;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        top: 87%;
+    }
+
+    50% {
+        top: 90%;
+    }
+
+    100% {
+        top: 87%;
+    }
+}
+
+body {
+    height: 100%;
+    max-width: 100%;
+}
+
+/*--------------- Navigationsbar styling -----------------*/
+
+.topnav {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.topnav #myLinks {
+    display: none;
+    text-transform: uppercase;
+}
+
+.topnav #myLinks a {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #555
+}
+
+.topnav a img {
+    width: 120px;
+}
+
+.topnav a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    font-family: overskrift;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    font-size: 40px;
+    right: 0;
+    top: 0;
+    border-bottom: none;
+}
+
+.topnav div a:hover {
+    background-color: #074f4b;
+}
+
+.active {
+    background-color: rgba(0, 0, 0, .0);
+    color: white;
+    border-bottom: 0;
+}
+
+nav {
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    transition: .8s;
+    z-index: 999999;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+}
+
+nav.menu_baggrund {
+    background: rgba(0, 0, 0, .8);
+    padding: 5px 0px;
+}
+
+/*------------- Navigations styling slut ----------------- */
+
+/*--------------Animation med knap styling-----------------*/
+
+.spoergsmaal {
+    font-family: overskrift;
+    color: #00908a;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /*----- Firefox --------*/
+    -webkit-animation: fadein 2s;
+    /*-- Safari and Chrome-- */
+    -o-animation: fadein 2s;
+    /*------- Opera -------*/
+}
+
+.section1 button img {
+    width: 70%;
+}
+
+.knap {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: none;
+    font-family: overskrift;
+    z-index: 1000;
+    transition: .3s;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+
+}
+
+.knap:focus {
+    outline: none;
+}
+
+.knap:hover {
+    cursor: pointer;
+    font-size: 26px;
+}
+
+.hidden {
+    display: none;
+}
+
+.content {
+    overflow: hidden;
+}
+
+.animation {
+    width: 100%;
+    height: 100vh;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+}
+
+/*------------Animation med knap styling slut-------------*/
+
+/*------------- Navigations styling med scroll effekt ----------------- */
+
+nav.menu_baggrund ul li a {
+    color: white;
+}
+
+nav ul {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 2px;
+}
+
+nav ul li .tt {
+    font-size: 20px;
+    line-height: 80px;
+    color: #262626;
+    padding: 5px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    font-family: Overskrift;
+}
+
+nav ul li img {
+    line-height: 20px;
+}
+
+nav.menu_baggrund nav ul li a {
+    color: #fff;
+}
+
+
+nav ul li .tt:hover {
+
+    color: #fff;
+    background: rgba(0, 0, 0, .8);
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+}
+
+nav.menu_baggrund ul li .tt.active,
+nav.menu_baggrund ul li .tt:hover {
+    color: #fff;
+    background: #008f8a;
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+}
+
+
+nav ul li ul {
+    position: absolute;
+    left: 1%;
+    display: none;
+    background: rgba(0, 0, 0, .8);
+    margin-top: -18px;
+    font-size: 12px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav ul li ul li {
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+nav ul li ul li a {
+    color: #fff;
+    font-family: Overskrift;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li:hover > ul,
+nav ul li ul:hover {
+    position: relative;
+    display: block;
+    color: #fff;
+}
+
+nav ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+nav.menu_baggrund ul li ul {
+    background-color: rgb(0, 143, 138);
+    left: 1%;
+    margin-top: -18px;
+    font-size: 15px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav.menu_baggrund ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.lille_logo {
+    width: 110px;
+    padding: 10px 30px;
+    transition: 0.8s;
+
+}
+
+.lille_logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+nav.menu_baggrund ul li img {
+    margin-bottom: -100px;
+}
+
+/*------------- Navigations styling med scroll effekt ----------------- */
+
+
+.section1 {
+    position: relative;
+    background-color: white;
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.stort_logo {
+    transition: .5s;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.moto {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+    color: #fff;
+    font-family: Overskrift;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.scroll-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    color: #f99a38;
+    z-index: 50;
+    text-shadow: 0px 1px 5px #262626;
+
+    -webkit-animation: bounce 1.5s infinite;
+    animation: bounce 1.5s infinite;
+}
+
+
+
+/* ---------------------- INFOGRAPHIC -------------------------------*/
+.info_ov {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 1%;
+    color: #008f8a;
+    font-size: 25px;
+    letter-spacing: 1px;
+    z-index: 1;
+    font-family: Overskrift;
+}
+
+h1 {
+    color: #52cf46;
+}
+
+.infographic {
+    margin-top: 50px;
+    position: relative;
+    max-width: 100%;
+    justify-content: center;
+    background-color: #fff;
+    display: flex;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: -1;
+}
+
+.infographic_animationer {
+    position: relative;
+    width: 75vw;
+}
+
+.infographic img {
+    width: 100%;
+
+}
+
+.step_1 {
+    position: absolute;
+    top: 5%;
+    left: 20%;
+    text-align: center;
+    background-color: rgb(0, 143, 138);
+    color: white;
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    width: 25vw;
+    padding: 20px;
+    font-family: tekst;
+    border-radius: 10px;
+
+}
+
+.step_2 {
+
+    position: absolute;
+    top: 14.7%;
+    right: 12%;
+    text-align: center;
+    background-color: rgb(0, 143, 138);
+    color: white;
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    width: 12vw;
+    padding: 20px;
+    font-family: tekst;
+    border-radius: 10px;
+}
+
+.step_3 {
+
+    position: absolute;
+    top: 22%;
+    left: 35%;
+    text-align: center;
+    background-color: rgb(0, 143, 138);
+    color: white;
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    width: 20vw;
+    padding: 20px;
+    font-family: tekst;
+    border-radius: 10px;
+}
+
+.step_4 {
+
+    position: absolute;
+    top: 30.5%;
+    right: 5%;
+    text-align: center;
+    background-color: rgb(0, 143, 138);
+    color: white;
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    width: 25vw;
+    padding: 20px;
+    font-family: tekst;
+    border-radius: 10px;
+}
+
+.step_5 {
+
+    position: absolute;
+    top: 44%;
+    right: 25%;
+    text-align: center;
+    background-color: rgb(0, 143, 138);
+    color: white;
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    width: 12vw;
+    padding: 20px;
+    font-family: tekst;
+    border-radius: 10px;
+}
+
+.step_6 {
+
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    text-align: center;
+    background-color: rgb(0, 143, 138);
+    color: white;
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    width: 25vw;
+    padding: 20px;
+    font-family: tekst;
+    border-radius: 10px;
+}
+
+.step_7 {
+
+    position: absolute;
+    bottom: 46%;
+    left: 25%;
+    text-align: center;
+    background-color: rgb(0, 143, 138);
+    color: white;
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    width: 30vw;
+    padding: 20px;
+    font-family: tekst;
+    border-radius: 10px;
+}
+
+.step_8 {
+
+    position: absolute;
+    bottom: 30%;
+    right: 10%;
+    text-align: center;
+    background-color: rgb(0, 143, 138);
+    color: white;
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    width: 30vw;
+    padding: 20px;
+    font-family: tekst;
+    border-radius: 10px;
+}
+
+.step_9 {
+
+    position: absolute;
+    bottom: 17%;
+    left: 15%;
+    text-align: center;
+    background-color: rgb(0, 143, 138);
+    color: white;
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    width: 30vw;
+    padding: 20px;
+    font-family: tekst;
+    border-radius: 10px;
+}
+
+.step_10 {
+
+    position: absolute;
+    bottom: 11%;
+    right: 25%;
+    text-align: center;
+    background-color: rgb(0, 143, 138);
+    color: white;
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    width: 12vw;
+    padding: 10px;
+    font-family: tekst;
+    border-radius: 10px;
+}
+
+/* ---------------------- INFOGRAPHIC SLUT -------------------------------*/
+
+/*------------------------"PRAKTISK" AFSNIT start-------------------------*/
+
+/* -------------------------Skrå kanter styling---------------------------*/
+.praktisk_kalender {
+    height: 1200px;
+    margin-top: -10vw;
+}
+
+.praktisk {
+    width: 100%;
+    height: 750px;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #156a5a;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+}
+
+/* ------------------Skrå kanter styling slut------------------------------*/
+
+/*-----------------------------Tekst stylyng------------------------------*/
+
+.praktisk_tekst {
+    position: relative;
+    max-width: 50%;
+    top: 10%;
+    left: 10%;
+}
+
+.praktisk h2 {
+    color: #fff;
+    font-family: overskrift;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.praktisk p {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Tekst;
+    line-height: 40px;
+}
+
+/*--------------------------Tekst stylyng slut------------------------------*/
+
+
+/*-------------------------Knap styling-----------------------------------*/
+
+.praktisk button {
+    float: left;
+    padding: 15px 50px 15px 50px;
+    border-radius: 50px;
+    border-style: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Overskrift;
+    box-shadow: 0px 2px 10px #262626;
+    color: #fff;
+    background-color: #00a87b;
+    transition: .2s;
+}
+
+.praktisk button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+
+/*---------------------Knap styling slut -------------------------------*/
+
+/*-----------------------Ikon tekstafsnit styling-----------------------*/
+
+.praktisk img {
+    position: absolute;
+    width: 250px;
+    top: 15%;
+    right: 10%;
+    transition: transform .2s;
+}
+
+.praktisk img:hover {
+    transform: scale(1.05);
+}
+
+/*--------------------Ikon tekstafsnit styling slut-----------------------*/
+/*------------------------"PRAKTISK" AFSNIT slut-------------------------*/
+
+
+/*------------------------"KALENDER AFSNIT start-------------------------*/
+/*--------------------Kalender main div styling--------------------------*/
+
+.kalender {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 750px;
+    margin-top: -300px;
+    background-color: #00a87b;
+}
+
+/*-----------------------------Tekst stylyng------------------------------*/
+
+.kalender_tekst {
+    position: absolute;
+    max-width: 50%;
+    bottom: 25%;
+    right: 10%;
+    text-align: right;
+}
+
+.kalender h2 {
+    color: #fff;
+    font-family: overskrift;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.kalender p {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Tekst;
+    line-height: 40px;
+}
+
+/*--------------------------Tekst stylyng slut------------------------------*/
+
+/*---------------------------Knap styling-----------------------------------*/
+.kalender button {
+    float: left;
+    padding: 15px 50px 15px 50px;
+    border-radius: 50px;
+    border-style: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Overskrift;
+    box-shadow: 0px 2px 10px #262626;
+    color: #fff;
+    background-color: #156a5a;
+    transition: transform .2s;
+    float: right;
+}
+
+.kalender button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/*---------------------Knap styling slut -------------------------------*/
+
+/*-----------------------Ikon tekstafsnit styling-----------------------*/
+
+.kalender img {
+    position: absolute;
+    width: 250px;
+    bottom: 25%;
+    left: 10%;
+    transition: transform .2s;
+}
+
+.kalender img:hover {
+    transform: scale(1.05);
+}
+
+/*------------------Ikon tekstafsnit styling slut-----------------------*/
+/*------------------------"KALENDER AFSNIT slut-------------------------*/
+
+
+/*--------------------Instagram slut-------------------------------*/
+
+.insta {
+    position: relative;
+    text-align: center;
+    background-color: #262626;
+    color: #fff;
+}
+
+.insta h2 {
+    font-family: Overskrift;
+    letter-spacing: 1px;
+    padding: 15px;
+}
+
+.insta h2 img {
+    width: 30px;
+    padding-top: 7.5px;
+    position: absolute;
+}
+
+
+
+.billede_box {
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.box {
+    padding: 50px;
+    width: 20vw;
+}
+
+.box a img {
+    max-width: 100%;
+}
+
+
+/*--------------------Instagram slut--------------------------*/
+
+/*--------------------DIY AFSNIT start------------------------*/
+/*--------------------DIY main div styling---------------------*/
+
+.diy_opslagstavle {
+    height: 1420px;
+}
+
+/*-------------------------------Skrå kanter---------------------------*/
+.diy {
+    width: 100%;
+    height: 850px;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #008f8a;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+}
+
+/*----------------------------Skrå kanter slut---------------------------*/
+
+/*-----------------------------Tekst stylyng------------------------------*/
+.diy_tekst {
+    position: absolute;
+    max-width: 50%;
+    top: 6%;
+    left: 10%;
+}
+
+.diy h2 {
+    color: #fff;
+    font-family: overskrift;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.diy p {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Tekst;
+    line-height: 40px;
+}
+
+/*--------------------------Tekst stylyng slut------------------------------*/
+
+/*---------------------------Knap styling-----------------------------------*/
+
+.diy button {
+    float: left;
+    padding: 15px 50px 15px 50px;
+    border-radius: 50px;
+    border-style: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Overskrift;
+    box-shadow: 0px 2px 10px #262626;
+    color: #fff;
+    background-color: #074f4b;
+    transition: .2s;
+}
+
+.diy button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+
+}
+
+/*---------------------Knap styling slut -------------------------------*/
+
+/*-----------------------Ikon tekstafsnit styling-----------------------*/
+
+.diy img {
+    position: absolute;
+    width: 250px;
+    top: 15%;
+    right: 10%;
+    transition: transform .2s;
+    transform: rotate(10deg);
+}
+
+.diy img:hover {
+    transform: scale(1.05);
+    transform: rotate(15deg);
+}
+
+/*-------------------Ikon tekstafsnit styling slut-----------------------*/
+/*--------------------"DIY AFSNIT slut-----------------------------------*/
+
+/*--------------------"OPSLAGSTAVLE AFSNIT start------------------------*/
+/*--------------------Opslagstavle main div styling---------------------*/
+
+.opslagstavle {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 950px;
+    margin-top: -380px;
+    background-color: #074f4b;
+}
+
+/*-----------------------------Tekst stylyng------------------------------*/
+
+.opslagstavle_tekst {
+    position: absolute;
+    max-width: 50%;
+    bottom: 10%;
+    right: 10%;
+    text-align: right;
+}
+
+.opslagstavle h2 {
+    color: #fff;
+    font-family: overskrift;
+    font-size: 50px;
+    letter-spacing: 2px;
+
+}
+
+.opslagstavle p {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Tekst;
+    line-height: 40px;
+}
+
+/*--------------------------Tekst stylyng slut------------------------------*/
+/*---------------------------Knap styling-----------------------------------*/
+
+.opslagstavle button {
+    float: left;
+    padding: 15px 50px 15px 50px;
+    border-radius: 50px;
+    border-style: none;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Overskrift;
+    box-shadow: 0px 2px 10px #262626;
+    color: #fff;
+    background-color: #008f8a;
+    transition: .2s;
+    float: right;
+}
+
+.opslagstavle button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+/*---------------------Knap styling slut -------------------------------*/
+
+/*-----------------------Ikon tekstafsnit styling-----------------------*/
+
+.opslagstavle img {
+    position: absolute;
+    width: 250px;
+    bottom: 25%;
+    left: 10%;
+    transition: transform .2s;
+}
+
+.opslagstavle img:hover {
+    transform: scale(0.95);
+}
+
+/*-------------------Ikon tekstafsnit styling slut-----------------------*/
+/*--------------------"OPSLAGSTAVLE AFSNIT slut--------------------------*/
+
+/*-----------------------------FOOTER--------------------------------*/
+
+
+footer {
+    min-height: 450px;
+    background-color: #262626;
+    color: #fff;
+    font-family: tekst;
+}
+
+.some {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.some div {
+    display: flex;
+    background-color: #074f4b;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    margin: 50px;
+}
+
+
+.some a {
+    position: relative;
+    top: 15%;
+    text-decoration: none;
+    color: #262626;
+    font-size: 50px;
+}
+
+.some i {
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.info div {
+    width: 320px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.info h2 {
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-family: Overskrift;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.info p {
+    letter-spacing: 1px;
+}
+
+.copyright {
+    text-align: center;
+    font-family: Overskrift;
+    font-size: 20px;
+    padding: 5px;
+    letter-spacing: 5px;
+}
+
+/*-------------------------FOOTER slut--------------------------------*/
+
+/*-------------------------------------------MEDIA QUERY-----------------------------------*/
+
+@media (max-width: 1010px) {
+
+    nav {
+        display: none;
+    }
+
+    .skrald {
+        display: none;
+    }
+
+    .hidden {
+        display: block;
+    }
+
+
+    .topnav {
+        display: block;
+        z-index: 999999;
+    }
+
+
+    .section1 {
+        display: none;
+    }
+
+    .info_ov {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        color: #008f8a;
+        font-size: 3vw;
+        letter-spacing: 1px;
+        z-index: 1;
+        font-family: Overskrift;
+    }
+
+    h1 {
+        color: #52cf46;
+        font-size: 6vw;
+    }
+
+    .infographic {
+        position: relative;
+        max-width: 100%;
+        justify-content: center;
+        background-color: #fff;
+        display: flex;
+        overflow: hidden;
+        margin-right: auto;
+        margin-left: auto;
+        z-index: -1;
+        margin-top: 75px;
+    }
+
+    .infographic_animationer {
+        position: relative;
+        width: 100vw;
+    }
+
+    .step_1 {
+        position: absolute;
+        top: 11%;
+        left: 2%;
+        text-align: center;
+        background-color: rgb(0, 143, 138);
+        color: white;
+        font-size: 2.2vw;
+        letter-spacing: 0.5px;
+        width: 40vw;
+        padding: 5px;
+        font-family: tekst;
+        border-radius: 10px;
+
+    }
+
+
+    .step_2 {
+
+        position: absolute;
+        top: 14.7%;
+        right: 13%;
+        text-align: center;
+        background-color: rgb(0, 143, 138);
+        color: white;
+        font-size: 2.2vw;
+        letter-spacing: 0.5px;
+        width: 25vw;
+        padding: 5px;
+        font-family: tekst;
+        border-radius: 10px;
+    }
+
+    .step_3 {
+
+        position: absolute;
+        top: 21.5%;
+        left: 30%;
+        text-align: center;
+        background-color: rgb(0, 143, 138);
+        color: white;
+        font-size: 2.2vw;
+        letter-spacing: 0.5px;
+        width: 35vw;
+        padding: 5px;
+        font-family: tekst;
+        border-radius: 10px;
+    }
+
+    .step_4 {
+
+        position: absolute;
+        top: 30.5%;
+        right: 5%;
+        text-align: center;
+        background-color: rgb(0, 143, 138);
+        color: white;
+        font-size: 2.2vw;
+        letter-spacing: 0.5px;
+        width: 40vw;
+        padding: 5px;
+        font-family: tekst;
+        border-radius: 10px;
+    }
+
+    .step_5 {
+
+        position: absolute;
+        top: 48%;
+        right: 36%;
+        text-align: center;
+        background-color: rgb(0, 143, 138);
+        color: white;
+        font-size: 2vw;
+        letter-spacing: 0.5px;
+        width: 20vw;
+        padding: 5px;
+        font-family: tekst;
+        border-radius: 10px;
+    }
+
+    .step_6 {
+
+        position: absolute;
+        top: 39.4%;
+        left: 7%;
+        text-align: center;
+        background-color: rgb(0, 143, 138);
+        color: white;
+        font-size: 2.2vw;
+        letter-spacing: 0.5px;
+        width: 40vw;
+        padding: 5px;
+        font-family: tekst;
+        border-radius: 10px;
+    }
+
+    .step_7 {
+
+        position: absolute;
+        bottom: 34.5%;
+        left: 5%;
+        text-align: center;
+        background-color: rgb(0, 143, 138);
+        color: white;
+        font-size: 2.2vw;
+        letter-spacing: 0.5px;
+        width: 40vw;
+        padding: 5px;
+        font-family: tekst;
+        border-radius: 10px;
+    }
+
+    .step_8 {
+
+        position: absolute;
+        bottom: 29%;
+        right: 5%;
+        text-align: center;
+        background-color: rgb(0, 143, 138);
+        color: white;
+        font-size: 2.2vw;
+        letter-spacing: 0.5px;
+        width: 40vw;
+        padding: 5px;
+        font-family: tekst;
+        border-radius: 10px;
+    }
+
+    .step_9 {
+
+        position: absolute;
+        bottom: 16%;
+        left: 5%;
+        text-align: center;
+        background-color: rgb(0, 143, 138);
+        color: white;
+        font-size: 2.2vw;
+        letter-spacing: 0.5px;
+        width: 60vw;
+        padding: 5px;
+        font-family: tekst;
+        border-radius: 10px;
+    }
+
+    .step_10 {
+
+        position: absolute;
+        bottom: 11%;
+        right: 25%;
+        text-align: center;
+        background-color: rgb(0, 143, 138);
+        color: white;
+        font-size: 2.2vw;
+        letter-spacing: 0.5px;
+        width: 15vw;
+        padding: 5px;
+        font-family: tekst;
+        border-radius: 10px;
+    }
+
+    .praktisk_kalender {
+        height: 930px;
+        margin-top: -10vw;
+    }
+
+    .praktisk {
+        height: 550px;
+        z-index: 1000;
+        display: flex;
+        position: relative;
+        background-color: #156a5a;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    }
+
+    .praktisk_tekst {
+        position: relative;
+        max-width: 90%;
+        top: 0%;
+        left: 0%;
+        padding: 20px;
+    }
+
+    .praktisk h2 {
+        color: #fff;
+        font-family: overskrift;
+        font-size: 7vw;
+        letter-spacing: 2px;
+    }
+
+    .praktisk p {
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Tekst;
+        line-height: 25px;
+    }
+
+    .praktisk button {
+        padding: 10px 35px 10px 35px;
+        border-radius: 50px;
+        border-style: none;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Overskrift;
+        box-shadow: 0px 2px 10px #262626;
+        color: #fff;
+        background-color: #00a87b;
+        transition: .2s;
+    }
+
+    .praktisk img {
+        position: absolute;
+        width: 12vw;
+        top: 2%;
+        right: 15%;
+        padding: 5px;
+    }
+
+    .kalender {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 500px;
+        margin-top: -120px;
+        background-color: #00a87b;
+    }
+
+    .kalender_tekst {
+        position: absolute;
+        text-align: right;
+        max-width: 100%;
+        top: 20%;
+        right: 0%;
+        padding: 20px;
+    }
+
+    .kalender h2 {
+        color: #fff;
+        font-family: overskrift;
+        font-size: 7vw;
+        letter-spacing: 2px;
+
+    }
+
+    .kalender p {
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Tekst;
+        line-height: 25px;
+    }
+
+    .kalender button {
+        float: right;
+        padding: 10px 35px 10px 35px;
+        border-radius: 50px;
+        border-style: none;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Overskrift;
+        box-shadow: 0px 2px 10px #262626;
+        color: #fff;
+        background-color: #156a5a;
+    }
+
+    .kalender img {
+        position: absolute;
+        width: 12vw;
+        top: 25%;
+        left: 15%;
+    }
+
+
+    .box {
+        padding: 15px;
+        width: 300px;
+    }
+
+    .diy_opslagstavle {
+        height: 900px;
+    }
+
+    .diy {
+        width: 100%;
+        height: 500px;
+        z-index: 1000;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        background-color: #008f8a;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    }
+
+
+    .diy_tekst {
+        position: absolute;
+        max-width: 100%;
+        top: 0%;
+        left: 0%;
+        padding: 20px;
+    }
+
+    .diy h2 {
+        color: #fff;
+        font-family: overskrift;
+        font-size: 7vw;
+        letter-spacing: 2px;
+
+    }
+
+    .diy p {
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Tekst;
+        line-height: 25px;
+    }
+
+    .diy button {
+        float: left;
+        padding: 10px 35px 10px 35px;
+        border-radius: 50px;
+        border-style: none;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Overskrift;
+        box-shadow: 0px 2px 10px #262626;
+        color: #fff;
+        background-color: #074f4b;
+    }
+
+
+    .diy img {
+        position: absolute;
+        width: 9vw;
+        top: 2%;
+        right: 10%;
+    }
+
+
+    .opslagstavle {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 480px;
+        margin-top: -50px;
+        background-color: #074f4b;
+    }
+
+    .opslagstavle_tekst {
+        position: absolute;
+        max-width: 100%;
+        top: 10%;
+        right: 0%;
+        padding: 20px;
+        text-align: right;
+    }
+
+    .opslagstavle h2 {
+        color: #fff;
+        font-family: overskrift;
+        font-size: 7vw;
+        letter-spacing: 2px;
+
+    }
+
+    .opslagstavle p {
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Tekst;
+        line-height: 25px;
+    }
+
+    .opslagstavle button {
+        float: left;
+        padding: 10px 35px 10px 35px;
+        border-radius: 50px;
+        border-style: none;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Overskrift;
+        box-shadow: 0px 2px 10px #262626;
+        color: #fff;
+        background-color: #008f8a;
+        float: right;
+    }
+
+
+    .opslagstavle img {
+        position: absolute;
+        width: 12vw;
+        top: 13%;
+        left: 10%;
+    }
+
+    .some {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .some a {
+        position: relative;
+        top: 0;
+        text-decoration: none;
+        color: #262626;
+        font-size: 35px;
+    }
+
+    .some div {
+        display: flex;
+        background-color: #074f4b;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        margin: 15px;
+        margin-top: 80px;
+
+    }
+
+}

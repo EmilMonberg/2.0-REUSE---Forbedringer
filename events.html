@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Her på siden kan du danne dig et overblik over kommende begivenheder, arrangementer og workshops på REUSE. Find det hele i vores kalender.">
+    <title>REUSE - Kalender</title>
+    <link rel="shortcut icon" href="Billeder/favicon.png" type="image/x-icon">
+    <link rel="icon" href="Billeder/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/events-design.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href='core/main.css' rel='stylesheet' />
+    <link href='daygrid/main.css' rel='stylesheet' />
+    <script src='core/main.js'></script>
+    <script src='daygrid/main.js'></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="Javascript/Javascript.js"></script>
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a href="index.html" class="active"><img src="Billeder/logo-uden-baggrund.png" alt="REUSE logo"> </a>
+        <div id="myLinks">
+            <a href="koncept.html" style="border-top: 1px solid #fff">Koncept</a>
+            <a href="praktisk.html">Praktisk</a>
+            <a href="faq.html">FAQ</a>
+            <a href="events.html">Events</a>
+            <a href="diy.html">DIY</a>
+            <a href="opslagstavle.html">Opslagstavle</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <section class="section1">
+
+        <header>
+
+            <!------------------------------------Navigationsbar------------------------------------->
+
+            <nav>
+                <ul>
+                    <li><a href="index.html"><img class="lille_logo" src="Billeder/logo-uden-baggrund.png" alt="REUSE logo"></a></li>
+                    <li><a href="koncept.html" class="tt">Koncept</a>
+                    <li><a href="praktisk.html" class="tt">Praktisk</a>
+                        <ul>
+                            <li><a href="praktisk.html">INFORMATION</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="events.html" class="tt active">Events</a></li>
+                    <li><a href="diy.html" class="tt">DIY</a></li>
+                    <li><a href="opslagstavle.html" class="tt">Opslagstavle</a></li>
+                </ul>
+            </nav>
+
+            <!--------------------------------Navigationsbar slut------------------------------------->
+
+        </header>
+
+        <!------------------------------------------Tekstafsnit----------------------------------->
+
+    </section>
+
+    <div class="intro_tekst">
+
+        <div class="intro_tekst_box">
+
+            <h1>DET SKER PÅ REUSE</h1>
+
+            <p> På denne side kan du følge med i, hvilke arrangementer, workshops og generelle begivenheder, der afholdes nede ved os. Vi opdaterer løbende kalenderen, så følg med her eller på vores Facebookside. </p>
+
+        </div>
+
+    </div>
+
+    <section>
+
+        <div class="baggrund">
+
+            <div class="kalender_box">
+
+                <div class="kalender">
+
+                    <div id='calendar'></div>
+
+                </div>
+
+            </div>
+
+            <div class="events">
+
+                <div class="event_Box">
+
+                    <div class="billede_Box">
+
+                        <img src="Billeder/Plante-kasse.jpg" alt="Billede af plantekasser">
+
+                        <div class="dato_Box">
+                            <p>18/5</p>
+                        </div>
+
+                    </div>
+
+                    <div class="text_Box">
+                        <h2>Byg din egen Plantekasse</h2>
+                        <p>Er du også ved at gøre terrassen sommerklar? Så kom forbi hos os, når vi lørdag den 18. maj 2019 afholder en workshop i, hvordan du bygger din egen plantekasse…</p>
+                        <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+
+                </div>
+
+
+                <div class="event_Box">
+
+                    <div class="billede_Box">
+
+                        <img src="Billeder/bliv-klogere.jpg" alt="Genbrugs logo">
+
+                        <div class="dato_Box">
+                            <p>4/6</p>
+                        </div>
+
+                    </div>
+
+                    <div class="text_Box">
+                        <h2>Bliv klogere på genanvendelighed</h2>
+                        <p>Tirsdag d. 4. juni 2019 afholder vi en workshop i samarbejde med AffaldVarme, hvor du kan komme og blive klogere på affaldshåndtering samt tips og tricks… </p>
+                        <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+
+                </div>
+
+
+                <div class="event_Box">
+
+                    <div class="billede_Box">
+
+                        <img src="Billeder/Decoupage.jpg" alt="Dekoration på tallerken">
+
+                        <div class="dato_Box">
+                            <p>23/6</p>
+                        </div>
+
+                    </div>
+
+                    <div class="text_Box">
+                        <h2>Kunsten at lave Decoupage</h2>
+                        <p>Vil du lære hvordan man skaber decoupage? Så kom forbi REUSE den 23. juni 2019. Her lærer du alle de kreative procceser ved decoupage!
+                            Kom frisk :-) </p>
+                        <a href="#"><i class="fas fa-arrow-circle-right"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="frivillig">
+            <p> Er du interesseret i at afholde et arrangement eller en workshop nede ved os? Eller har du ideer til arrangementer, så hører vi meget gerne fra dig/jer.
+                Kontakt vores projektkoordinator Peter Christensen på telefonnummer <b> +45 41 85 97 05 </b>eller på mail <b>petch@aarhus.dk.</b>
+
+                <br>
+                <br>
+                Vi glæder os til at høre fra dig! :-) </p>
+        </div>
+
+    </section>
+
+    <!----------------------------------Tekstafsnit slut --------------------------------->
+
+
+    <!-------------------------Javascript til at aktivere kalender------------------------>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var calendarEl = document.getElementById('calendar');
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['dayGrid']
+            });
+
+            calendar.render();
+        });
+    </script>
+
+    <!---------------------Javascript til at aktivere kalender slut------------------------>
+
+
+    <!-----------------------------------------Footer------------------------------------->
+
+    <footer>
+
+        <div class="some">
+            <div>
+                <a href="https://www.facebook.com/ReUseAarhus/"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div>
+                <a href="https://www.instagram.com/explore/locations/720612896/reuse-aarhus/"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div>
+                <a href="https://www.youtube.com/user/aakvideosite"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="info">
+            <div>
+                <h2>Adresse</h2>
+                <p>Jægergårdsgade 164 C.</p>
+                <p>Aarhus C</p>
+            </div>
+            <div>
+                <h2>Åbningstider</h2>
+                <p>Kl. 12 - 17 hver dag</p>
+                <p>*Der kan være andre åbningstider i forbindelse med helligdage*</p>
+            </div>
+            <div>
+                <h2>Kontakt</h2>
+                <p>Affaldvarme@Aarhus.dk</p>
+                <p>Tlf: 89 40 15 00</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>REUSE</p>
+        </div>
+
+    </footer>
+
+    <!-----------------------------------Footer slut------------------------------------->
+
+
+</body>
+
+</html>

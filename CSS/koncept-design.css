@@ -1,0 +1,883 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------ Fonts ---------------------------*/
+
+@font-face {
+    font-family: 'Overskrift';
+    src: url('../Fonts/Loew-Heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tekst';
+    src: url('../Fonts/Loew-Regular.otf') format('opentype');
+}
+
+/*-------------------- Keyframes ---------------------------*/
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+
+    /*------------------ Firefox ------------------------ */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    /*-------------- Safari og Chrome -------------------*/
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+
+    /*--------------------- Opera -----------------------*/
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    height: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/*--------------- Navigationsbar styling -----------------*/
+
+.topnav a img {
+    width: 120px;
+}
+
+.topnav #myLinks {
+    display: none;
+    text-transform: uppercase;
+}
+
+.topnav #myLinks a {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.topnav a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    font-family: overskrift;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    font-size: 40px;
+    right: 0;
+    top: 0;
+    border-bottom: none;
+}
+
+
+.topnav div a:hover {
+    background-color: #074f4b;
+}
+
+.active {
+    background-color: rgba(0, 0, 0, .0);
+    color: white;
+}
+
+nav {
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    transition: .8s;
+    z-index: 999999;
+
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+}
+
+nav.menu_baggrund {
+    background: rgba(0, 0, 0, .8);
+    padding: 5px 0px;
+}
+
+
+nav.menu_baggrund ul li a {
+    color: white;
+}
+
+nav ul {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 2px;
+}
+
+nav ul li .tt {
+    font-size: 20px;
+    line-height: 80px;
+    color: #262626;
+    padding: 5px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    font-family: Overskrift;
+}
+
+nav ul li img {
+    line-height: 20px;
+}
+
+nav.menu_baggrund nav ul li a {
+    color: #fff;
+}
+
+nav ul li .tt.active {
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li .tt:hover {
+
+    color: #fff;
+    background: rgba(0, 0, 0, .8);
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+}
+
+nav.menu_baggrund ul li .tt.active,
+nav.menu_baggrund ul li .tt:hover {
+    color: #fff;
+    background: #008f8a;
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+    border: 1px solid #fff;
+}
+
+nav.menu_baggrund ul li img {
+    margin-bottom: -100px;
+}
+
+.lille_logo {
+    width: 110px;
+    padding: 10px 30px;
+    transition: 0.8s;
+
+}
+
+.lille_logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 1%;
+    display: none;
+    background: rgba(0, 0, 0, .8);
+    margin-top: -18px;
+    font-size: 12px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav ul li ul li {
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+nav ul li ul li a {
+    color: #fff;
+    font-family: Overskrift;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li:hover > ul,
+nav ul li ul:hover {
+    position: relative;
+    display: block;
+    color: #fff;
+}
+
+nav ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+nav.menu_baggrund ul li ul {
+    background-color: rgb(0, 143, 138);
+    left: 1%;
+    margin-top: -18px;
+    font-size: 15px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav.menu_baggrund ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/*------------- Navigationsbar styling slut ---------------*/
+
+/*-------------Øverste billede på siden-------------------*/
+.section1 {
+    background: url(../Billeder/koncept-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+    width: 100%;
+    height: 75vh;
+}
+
+/*-----------------------INDHOLD-------------------------------*/
+
+.content {
+    overflow: hidden;
+}
+
+.koncept {
+    width: 100%;
+    height: 600px;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #156a5a;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
+
+}
+
+/*----------------------Tekst styling -------------------------*/
+
+.koncept_tekst {
+    position: relative;
+    max-width: 60%;
+    top: 10%;
+    left: 10%;
+}
+
+.koncept h1 {
+    color: #fff;
+    font-family: overskrift;
+    font-size: 3vw;
+    letter-spacing: 2px;
+}
+
+.koncept p {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Tekst;
+    line-height: 40px;
+}
+
+/*----------------------Tekst styling slut -------------------------*/
+
+
+.citat1 {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 700px;
+    margin-top: -250px;
+    background-color: #00a87b;
+}
+
+.citat1_tekst {
+    position: absolute;
+    max-width: 60%;
+    bottom: 10%;
+    right: 10%;
+    text-align: right;
+}
+
+
+/*----------------------Tekst styling -------------------------*/
+
+.citat1 h2 {
+    color: #fff;
+    font-family: overskrift;
+    font-size: 3vw;
+    letter-spacing: 2px;
+}
+
+.citat1 p {
+    position: relative;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Tekst;
+    line-height: 40px;
+}
+
+.span1 {
+    color: #f99a38;
+    font-size: 100px;
+    font-family: overkrift;
+}
+
+.span2 {
+    position: absolute;
+    padding-bottom: 20px;
+    color: #f99a38;
+    font-size: 100px;
+    font-family: overkrift;
+    transform: rotate(180deg)
+}
+
+/*----------------------Tekst styling slut -------------------------*/
+
+/*-------------Sektion med containerbillede styling-------------*/
+
+.containerbillede {
+    background: url(../Billeder/orange-container.JPG);
+    width: 100%;
+    height: 650px;
+    z-index: 200;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+    overflow: hidden;
+}
+
+/*------------------Sektion med cirkulær økonomi---------------*/
+
+.cirkulaeroekonomi {
+    position: relative;
+    z-index: -1000;
+    width: 100%;
+    height: 650px;
+    margin-top: -290px;
+    background-color: #008f8a;
+}
+
+/*----------------------Tekst styling -------------------------*/
+
+.cirkulaeroekonomi_tekst {
+    position: relative;
+    max-width: 60%;
+    top: 30%;
+    left: 10%;
+}
+
+.cirkulaeroekonomi h2 {
+    color: #fff;
+    font-family: overskrift;
+    font-size: 3vw;
+    letter-spacing: 2px;
+}
+
+.cirkulaeroekonomi h3 {
+    color: #fff;
+    font-family: tekst;
+    font-size: 2.5vw;
+    letter-spacing: 2px;
+}
+
+.cirkulaeroekonomi p {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: Tekst;
+    line-height: 40px;
+}
+
+/*----------------------Tekst styling slut -------------------------*/
+
+/*------------------Sektion med indretning--------------------------*/
+
+.indretning {
+    position: relative;
+    z-index: -50;
+    width: 100%;
+    height: 500px;
+    background-color: #074f4b;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 60%);
+}
+
+/*----------------------Tekst styling -------------------------*/
+.indretning_tekst {
+    position: relative;
+    max-width: 50%;
+    top: 15%;
+    left: 40%;
+    text-align: right;
+}
+
+.indretning h2 {
+    color: #fff;
+    font-family: overskrift;
+    font-size: 3vw;
+    letter-spacing: 2px;
+}
+
+.indretning p {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: tekst;
+    line-height: 40px;
+}
+
+/*----------------------Tekst styling slut -------------------------*/
+
+.indretningsbillede {
+    position: relative;
+    background: url(../Billeder/indretning.JPG);
+    width: 100%;
+    height: 650px;
+    z-index: -60;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin-top: -290px;
+}
+
+/*------------Mere end en genbrugsstation sektion--------------------*/
+.tekstboks1 {
+    background-color: #008f8a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+}
+
+/*----------------------Tekst styling -------------------------*/
+.tekstboks1_tekst {
+    position: relative;
+    max-width: 80%;
+    top: 25%;
+    left: 10%;
+    text-align: center;
+}
+
+.tekstboks1 h2 {
+    color: #fff;
+    font-family: overskrift;
+    font-size: 3vw;
+    letter-spacing: 2px;
+}
+
+.tekstboks1 p {
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-family: tekst;
+    line-height: 40px;
+}
+
+/*----------------------Tekst styling slut -------------------------*/
+
+/*----------------------INDHOLD SLUT---------------------------------*/
+
+/*-----------------------------FOOTER--------------------------------*/
+
+footer {
+    min-height: 450px;
+    background-color: #262626;
+    color: #fff;
+    font-family: tekst;
+}
+
+.some {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.some div {
+    display: flex;
+    background-color: #074f4b;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    margin: 50px;
+}
+
+.some a {
+    position: relative;
+    top: 15%;
+    text-decoration: none;
+    color: #262626;
+    font-size: 50px;
+}
+
+.some i {
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.info div {
+    width: 320px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.info h2 {
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-family: Overskrift;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.info p {
+    letter-spacing: 1px;
+}
+
+.copyright {
+    text-align: center;
+    font-family: Overskrift;
+    font-size: 20px;
+    padding: 5px;
+    letter-spacing: 5px;
+
+    /*------------------------FOOTER slut-------------------------------*/
+
+}
+
+/*----------------------------MEDIA QUERY-----------------------------------*/
+
+@media (max-width: 1010px) {
+
+    nav {
+        display: none;
+    }
+
+    .topnav {
+        display: block;
+        z-index: 999999;
+    }
+
+    .section1 {
+        background: url(../Billeder/koncept-banner.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 50vh;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        z-index: 99999;
+        position: relative;
+
+    }
+
+    .content {
+        overflow: hidden;
+        margin-top: -100px;
+    }
+
+    .koncept {
+        width: 100%;
+        height: 475px;
+        z-index: 1000;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        background-color: #00a87b;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    .koncept_tekst {
+        position: relative;
+        max-width: 100%;
+        top: 15%;
+        left: 0%;
+        padding: 20px;
+    }
+
+    .koncept h1 {
+        color: #fff;
+        font-family: overskrift;
+        font-size: 7vw;
+        letter-spacing: 2px;
+    }
+
+    .koncept p {
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Tekst;
+        line-height: 25px;
+    }
+
+    .citat1 {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 650px;
+        margin-top: -75px;
+        background-color: #156a5a;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    }
+
+    .citat1_tekst {
+
+        position: absolute;
+        max-width: 100%;
+        top: 15%;
+        right: 0%;
+        padding: 20px;
+        text-align: right;
+    }
+
+    .citat1 h2 {
+        color: #fff;
+        font-family: overskrift;
+        font-size: 7vw;
+        letter-spacing: 2px;
+    }
+
+    .citat1 p {
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Tekst;
+        line-height: 25px;
+    }
+
+    .span1 {
+        color: unset;
+        font-size: unset;
+        font-family: overkrift;
+    }
+
+    .span2 {
+        position: unset;
+        padding-top: unset;
+        color: unset;
+        font-size: unset;
+        font-family: overkrift;
+        transform: rotate(180deg)
+    }
+
+    .containerbillede {
+        background: url(../Billeder/orange-container.JPG);
+        width: 100%;
+        height: 400px;
+        z-index: 200;
+        margin-top: -100px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        overflow: hidden;
+    }
+
+    .cirkulaeroekonomi {
+        position: relative;
+        z-index: -1000;
+        width: 100%;
+        height: 550px;
+        margin-top: -65px;
+        background-color: #008f8a;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    }
+
+    .cirkulaeroekonomi_tekst {
+        position: relative;
+        max-width: 100%;
+        top: 10%;
+        left: 0%;
+        padding: 20px;
+    }
+
+    .cirkulaeroekonomi h2 {
+        color: #fff;
+        font-family: overskrift;
+        font-size: 7vw;
+        letter-spacing: 1.5px;
+    }
+
+    .cirkulaeroekonomih3 {
+        color: #fff;
+        font-family: tekst;
+        font-size: 5vw;
+        letter-spacing: 2px;
+    }
+
+    .cirkulaeroekonomi p {
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: Tekst;
+        line-height: 25px;
+    }
+
+    .indretning {
+        position: relative;
+        z-index: -10000;
+        width: 100%;
+        margin-top: -105px;
+        height: 400px;
+        background-color: #074f4b;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+
+    .indretning_tekst {
+        position: relative;
+        max-width: 100%;
+        top: 25%;
+        left: 0%;
+        text-align: right;
+        padding: 20px;
+
+    }
+
+    .indretning h2 {
+        color: #fff;
+        font-family: overskrift;
+        font-size: 7vw;
+        letter-spacing: 1.5px;
+    }
+
+    .indretning p {
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: tekst;
+        line-height: 25px;
+    }
+
+    .indretningsbillede {
+        position: relative;
+        background: url(../Billeder/indretning.JPG);
+        width: 100%;
+        height: 400px;
+        z-index: -60000;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: -60px;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    }
+
+    .tekstboks1 {
+        background-color: #008f8a;
+        position: relative;
+        width: 100%;
+        height: 500px;
+        margin-top: -75px;
+        z-index: -70000;
+    }
+
+    .tekstboks1_tekst {
+        position: relative;
+        max-width: 100%;
+        top: 10%;
+        left: 0%;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .tekstboks1 h2 {
+        color: #fff;
+        font-family: overskrift;
+        font-size: 7vw;
+        letter-spacing: 1.5px;
+    }
+
+    .tekstboks1 p {
+        color: #fff;
+        letter-spacing: 1px;
+        font-size: 15px;
+        font-family: tekst;
+        line-height: 25px;
+    }
+
+    .some {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .some a {
+        position: relative;
+        top: 0;
+        text-decoration: none;
+        color: #262626;
+        font-size: 35px;
+    }
+
+    .some div {
+        display: flex;
+        background-color: #074f4b;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        margin: 15px;
+        margin-top: 80px;
+    }
+
+}

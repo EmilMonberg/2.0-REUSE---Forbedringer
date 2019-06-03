@@ -1,0 +1,792 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------ Fonts ---------------------------*/
+
+@font-face {
+    font-family: 'Overskrift';
+    src: url('../Fonts/Loew-Heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tekst';
+    src: url('../Fonts/Loew-Regular.otf') format('opentype');
+}
+
+/*-------------------- Keyframes ---------------------------*/
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    height: 100%;
+    max-width: 100%;
+}
+
+/*--------------- Navigationsbar styling -----------------*/
+
+.topnav {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.topnav a img {
+    width: 120px;
+}
+
+.topnav #myLinks {
+    display: none;
+    text-transform: uppercase;
+}
+
+.topnav #myLinks a {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.topnav a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    font-family: overskrift;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    font-size: 40px;
+    right: 0;
+    top: 0;
+    border-bottom: none;
+}
+
+
+.topnav div a:hover {
+    background-color: #074f4b;
+}
+
+.active {
+    background-color: rgba(0, 0, 0, .0);
+    color: white;
+}
+
+nav {
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    transition: .8s;
+    z-index: 999999;
+
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+}
+
+/*------------- Navigations styling med scroll effekt ----------------- */
+
+nav.menu_baggrund {
+    background: rgba(0, 0, 0, .8);
+    padding: 5px 0px;
+}
+
+
+nav.menu_baggrund ul li a {
+    color: white;
+}
+
+nav ul {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 2px;
+}
+
+nav ul li .tt {
+    font-size: 20px;
+    line-height: 80px;
+    color: #262626;
+    padding: 5px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    font-family: Overskrift;
+}
+
+nav ul li img {
+    line-height: 20px;
+}
+
+nav.menu_baggrund nav ul li a {
+    color: #fff;
+}
+
+nav ul li .tt.active {
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li .tt:hover {
+
+    color: #fff;
+    background: rgba(0, 0, 0, .8);
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+}
+
+nav.menu_baggrund ul li .tt.active,
+nav.menu_baggrund ul li .tt:hover {
+    color: #fff;
+    background: #008f8a;
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+    border: 1px solid #fff;
+}
+
+nav.menu_baggrund ul li img {
+    margin-bottom: -100px;
+}
+
+.lille_logo {
+    width: 110px;
+    padding: 10px 30px;
+    transition: 0.8s;
+
+}
+
+.lille_logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 1%;
+    display: none;
+    background: rgba(0, 0, 0, .8);
+    margin-top: -18px;
+    font-size: 12px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav ul li ul li {
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+nav ul li ul li a {
+    color: #fff;
+    font-family: Overskrift;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li:hover > ul,
+nav ul li ul:hover {
+    position: relative;
+    display: block;
+    color: #fff;
+}
+
+nav ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+nav.menu_baggrund ul li ul {
+    background-color: rgb(0, 143, 138);
+    left: 1%;
+    margin-top: -18px;
+    font-size: 12px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav.menu_baggrund ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/*------------- Navigations styling med scroll effekt slut ----------------- */
+
+.section1 {
+    background-color: #156A5A;
+    width: 100%;
+    height: 10vw;
+}
+
+/*--------------------------Indhold----------------------*/
+
+.container {
+    background-color: #008f8a;
+    padding-bottom: 50px;
+}
+
+.container_mobil {
+    display: none;
+}
+
+.intro {
+    padding-top: 2vw;
+    width: 100%;
+    margin-top: -10vw;
+    height: 35vw;
+    background-color: #156A5A;
+    font-family: Overskrift;
+    color: white;
+    z-index: 300;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+h1 {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 3.5vw;
+}
+
+.it {
+    color: white;
+    font-family: Tekst;
+    font-size: 1.2vw;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.board {
+    width: 60%;
+    height: 90vw;
+    margin-top: -50vw;
+    display: block;
+    margin: auto;
+    z-index: 450;
+    position: relative;
+}
+
+.dato-t {
+    position: absolute;
+    color: white;
+    margin-top: 6vw;
+    left: 33%;
+    font-family: tekst;
+    z-index: 500;
+    font-size: 2.5vw;
+}
+
+.skabbillede {
+    position: absolute;
+    margin-top: 20vw;
+    left: 28.5%;
+    width: 10vw;
+    height: 15vw;
+    z-index: 1100;
+}
+
+.skabtekst {
+    color: white;
+    font-family: tekst;
+    font-size: 1.2vw;
+    position: absolute;
+    margin-top: 17vw;
+    z-index: 1000;
+    background-color: #008f8a;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 20%;
+    padding-bottom: 3%;
+    left: 25%;
+    box-shadow: 0 10px 10px rgba(0.2, 0.4, 0.4, 0.4);
+}
+
+.skoejtebillede {
+    position: absolute;
+    margin-top: 37vw;
+    right: 26.5%;
+    width: 12vw;
+    height: 12vw;
+    z-index: 1100;
+}
+
+.skoejtetekst {
+    color: white;
+    font-family: tekst;
+    font-size: 1.2vw;
+    position: absolute;
+    margin-top: 23vw;
+    z-index: 1000;
+    background-color: #074f4b;
+    padding-left: 2%;
+    padding-right: 15%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    right: 25.5%;
+    box-shadow: 0 10px 10px rgba(0.2, 0.4, 0.4, 0.4);
+}
+
+.pin1 {
+    width: 3vw;
+    height: 3vw;
+    z-index: 1100;
+    position: absolute;
+    left: 33%;
+    margin-top: 16vw;
+}
+
+.pin2 {
+    width: 3vw;
+    height: 3vw;
+    z-index: 1100;
+    position: absolute;
+    right: 36.5%;
+    margin-top: 21vw;
+    transform: rotate(-40deg);
+}
+
+.pin3 {
+    width: 3vw;
+    height: 3vw;
+    z-index: 1100;
+    position: absolute;
+    right: 48.5%;
+    margin-top: 53vw;
+    transform: rotate(-80deg);
+}
+
+.kagetekst {
+    color: white;
+    font-family: tekst;
+    font-size: 1.2vw;
+    position: absolute;
+    margin-top: 54vw;
+    z-index: 1000;
+    background-color: #00a87b;
+    padding-left: 2%;
+    padding-right: 3%;
+    padding-top: 4%;
+    padding-bottom: 3%;
+    left: 25%;
+    box-shadow: 0 10px 10px rgba(0.2, 0.4, 0.4, 0.4);
+}
+
+/*--------------------------Indhold slut----------------------*/
+
+/*-----------------------------FOOTER--------------------------------*/
+
+
+footer {
+    min-height: 450px;
+    background-color: #262626;
+    color: #fff;
+    font-family: tekst;
+}
+
+.some {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.some div {
+    display: flex;
+    background-color: #074f4b;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    margin: 50px;
+}
+
+
+.some a {
+    position: relative;
+    top: 15%;
+    text-decoration: none;
+    color: #262626;
+    font-size: 50px;
+}
+
+.some i {
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.info div {
+    width: 320px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.info h2 {
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-family: Overskrift;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.info p {
+    letter-spacing: 1px;
+}
+
+.copyright {
+    text-align: center;
+    font-family: Overskrift;
+    font-size: 20px;
+    padding: 5px;
+    letter-spacing: 5px;
+}
+
+/*-----------------------------FOOTER slut--------------------------------*/
+
+/*-------------------------------------------MEDIA QUERY-----------------------------------*/
+
+@media (max-width: 1010px) {
+
+    nav {
+        display: none;
+    }
+
+    .topnav {
+        display: block;
+        z-index: 999999;
+    }
+
+    .container {
+        display: none;
+    }
+
+    .container_mobil {
+        display: unset;
+    }
+
+    .section1 {
+        background-color: #156A5A;
+        width: 100%;
+        height: 80px;
+    }
+
+    .intro {
+        padding-top: 40px;
+        width: 100%;
+        margin-top: 0;
+        height: 375px;
+        background-color: #156A5A;
+        font-family: Overskrift;
+        color: white;
+        z-index: 300;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    }
+
+    .intro_Box {
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    h2 {
+        margin-top: 0%;
+        text-align: center;
+        font-size: 5vw;
+    }
+
+    .it {
+        color: white;
+        font-family: Tekst;
+        font-size: 15px;
+        width: 100%;
+        padding: 0px;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0px;
+    }
+
+    .baggrund {
+        background-color: #008f8a;
+        width: 100%;
+        margin-top: -120px;
+        position: relative;
+        padding-top: 120px;
+        padding-bottom: 100px;
+        z-index: -1;
+    }
+
+    .events {
+        background-color: #008f8a;
+        display: unset;
+        position: relative;
+        max-width: 100%;
+    }
+
+    .event_Box {
+        margin-bottom: 20px;
+        position: relative;
+        max-width: 100%;
+        border-radius: 0px 50px 0px 50px;
+        background-color: #074f4b;
+        border: 1px solid #fff;
+        margin: 5vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        z-index: 600;
+    }
+
+    .billede_Box {
+        width: 100%;
+        height: 50vw;
+        overflow: hidden;
+    }
+
+    .event_Box img {
+        max-width: 100%;
+        border-radius: 0px 49px
+        0px 0px;
+    }
+
+    .text_Box {
+        position: relative;
+        max-width: 100%;
+        padding: 20px;
+        padding-left: 20px;
+        color: #fff;
+        margin-top: -20px;
+    }
+
+    .text_Box h2 {
+        font-family: Overskrift;
+        max-width: 100%;
+    }
+
+    .text_Box p {
+        margin-top: 10px;
+        font-family: tekst;
+        max-width: 95%;
+        letter-spacing: 1px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+
+    .text_Box a {
+        position: absolute;
+        max-width: 100%;
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        right: 5px;
+        bottom: 5px;
+    }
+    
+
+    .some {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .some a {
+        position: relative;
+        top: 0;
+        text-decoration: none;
+        color: #262626;
+        font-size: 35px;
+    }
+
+    .some div {
+        display: flex;
+        background-color: #074f4b;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        margin: 15px;
+        margin-top: 80px;
+    }
+
+    @media (max-width: 650px) {
+
+        nav {
+            display: none;
+        }
+
+        .topnav {
+            display: block;
+            z-index: 999;
+        }
+
+        .kalender_box {
+            display: none;
+        }
+
+        .section1 {
+            background-color: #074f4b;
+            position: relative;
+            width: 100%;
+            height: 80px;
+        }
+
+        .intro_tekst {
+            height: 250px;
+            background-color: #074f4b;
+            position: relative;
+            z-index: 10;
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+            padding: 5vw;
+        }
+
+        .intro_Box {
+            padding: 5vw;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+
+        .baggrund {
+            background-color: #008f8a;
+            width: 100%;
+            margin-top: -120px;
+            position: relative;
+            padding-top: 120px;
+            padding-bottom: 100px
+        }
+
+        .events {
+            background-color: #008f8a;
+            display: unset;
+            position: relative;
+            max-width: 100%;
+        }
+
+        .event_Box {
+            margin-bottom: 0px;
+            position: relative;
+            max-width: 100%;
+            border-radius: 0px 50px 0px 50px;
+            background-color: #074f4b;
+            border: 1px solid #fff;
+            margin: 5vw;
+            margin-bottom: 35px;
+            z-index: 600;
+        }
+
+        .billede_Box {
+            width: 100%;
+            height: 50vw;
+            overflow: hidden;
+        }
+
+        .event_Box img {
+            max-width: 100%;
+            border-radius: 0px 50px
+            0px 0px;
+        }
+
+        .text_Box {
+            position: relative;
+            max-width: 100%;
+            padding: 20px;
+            padding-left: 20px;
+            color: #fff;
+            margin-top: -20px;
+        }
+
+        .text_Box h2 {
+            font-family: Overskrift;
+            max-width: 100%;
+        }
+
+        .text_Box p {
+            margin-top: 10px;
+            font-family: tekst;
+            max-width: 95%;
+            letter-spacing: 1px;
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .text_Box a {
+            position: absolute;
+            max-width: 100%;
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            right: 5px;
+            bottom: 5px;
+        }
+
+
+    }
+}

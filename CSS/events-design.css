@@ -1,0 +1,847 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------ Fonts ---------------------------*/
+
+@font-face {
+    font-family: 'Overskrift';
+    src: url('../Fonts/Loew-Heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tekst';
+    src: url('../Fonts/Loew-Regular.otf') format('opentype');
+}
+
+/* Keyframes */
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    height: 100%;
+    max-width: 100%;
+}
+
+/*------------- Navigations styling ----------------- */
+
+.topnav {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.topnav a img {
+    width: 120px;
+}
+
+.topnav #myLinks {
+    display: none;
+    text-transform: uppercase;
+}
+
+.topnav #myLinks a {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.topnav a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    font-family: overskrift;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    font-size: 40px;
+    right: 0;
+    top: 0;
+    border-bottom: none;
+}
+
+
+.topnav div a:hover {
+    background-color: #074f4b;
+}
+
+.active {
+    background-color: rgba(0, 0, 0, .0);
+    color: white;
+}
+
+nav {
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    transition: .8s;
+    z-index: 99999;
+
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+}
+/*------------- Navigations styling slut ----------------- */
+
+/*------------- Navigations styling med scroll effekt ----------------- */
+
+nav.menu_baggrund {
+    background: rgba(0, 0, 0, .8);
+    padding: 5px 0px;
+}
+
+
+nav.menu_baggrund ul li a {
+    color: white;
+}
+
+nav ul {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 2px;
+}
+
+nav ul li .tt {
+    font-size: 20px;
+    line-height: 80px;
+    color: #262626;
+    padding: 5px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    font-family: Overskrift;
+}
+
+nav ul li img {
+    line-height: 20px;
+}
+
+nav.menu_baggrund nav ul li a {
+    color: #fff;
+}
+
+nav ul li .tt.active {
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li .tt:hover {
+
+    color: #fff;
+    background: rgba(0, 0, 0, .8);
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+}
+
+nav.menu_baggrund ul li .tt.active,
+nav.menu_baggrund ul li .tt:hover {
+    color: #fff;
+    background: #008f8a;
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+    border: 1px solid #fff;
+}
+
+nav.menu_baggrund ul li img {
+    margin-bottom: -100px;
+}
+
+.lille_logo {
+    width: 110px;
+    padding: 10px 30px;
+    transition: 0.8s;
+
+}
+
+.lille_logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 1%;
+    display: none;
+    background: rgba(0, 0, 0, .8);
+    margin-top: -18px;
+    font-size: 12px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav ul li ul li {
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+nav ul li ul li a {
+    color: #fff;
+    font-family: Overskrift;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li:hover > ul,
+nav ul li ul:hover {
+    position: relative;
+    display: block;
+    color: #fff;
+}
+
+nav ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+nav.menu_baggrund ul li ul {
+    background-color: rgb(0, 143, 138);
+    left: 1%;
+    margin-top: -18px;
+    font-size: 15px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav.menu_baggrund ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/*------------- Navigations styling med scroll effekt slut ----------------- */
+
+/*--------------------Indhold----------------------------*/
+.section1 {
+    background-color: #074f4b;
+    position: relative;
+    width: 100%;
+    height: 175px;
+}
+
+.intro_tekst {
+    height: 300px;
+    background-color: #074f4b;
+    position: relative;
+    z-index: 10;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+}
+
+.intro_tekst_box {
+    max-width: 63%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.intro_tekst h1 {
+    position: relative;
+    color: #fff;
+    font-family: Overskrift;
+    font-size: 3vw;
+    letter-spacing: 2px;
+}
+
+.intro_tekst p {
+    position: relative;
+    letter-spacing: 1px;
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: tekst;
+
+}
+
+.events {
+    display: none;
+}
+
+.baggrund {
+    background-color: #008f8a;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-top: -100px;
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+.kalender_box {
+    position: relative;
+    margin-top: 50px;
+    padding: 30px;
+    width: 60%;
+    border-radius: 0px 100px 0px 100px;
+    background-color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.kalender {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: tekst;
+    z-index: 55;
+}
+
+.frivillig {
+    position: relative;
+    background-color: #074f4b;
+    z-index: 40;
+    height: 300px;
+    margin-top: -100px;
+    -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+}
+
+.frivillig p {
+    position: relative;
+    top: 30%;
+    max-width: 63%;
+    font-size: 18px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #fff;
+    font-family: tekst;
+}
+/*--------------------------Indhold SLUT----------------------------*/
+
+/*-----------------------------FOOTER--------------------------------*/
+
+
+footer {
+    min-height: 450px;
+    background-color: #262626;
+    color: #fff;
+    font-family: tekst;
+}
+
+.some {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.some div {
+    display: flex;
+    background-color: #074f4b;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    margin: 50px;
+}
+
+.some a {
+    position: relative;
+    top: 15%;
+    text-decoration: none;
+    color: #262626;
+    font-size: 50px;
+}
+
+.some i {
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.info div {
+    width: 320px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.info h2 {
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-family: Overskrift;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.info p {
+    letter-spacing: 1px;
+}
+
+.copyright {
+    text-align: center;
+    font-family: Overskrift;
+    font-size: 20px;
+    padding: 5px;
+    letter-spacing: 5px;
+}
+
+/*-------------------------------------------MEDIA QUERY-----------------------------------*/
+
+@media (max-width: 1010px) {
+
+    nav {
+        display: none;
+    }
+
+    .topnav {
+        display: block;
+        z-index: 999;
+    }
+
+    .kalender_box {
+        display: none;
+    }
+
+    .section1 {
+        background-color: #074f4b;
+        position: relative;
+        width: 100%;
+        height: 100px;
+    }
+
+    .intro_tekst {
+        height: 250px;
+        background-color: #074f4b;
+        position: relative;
+        z-index: 10;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+        padding: 0vw;
+        
+    }
+
+    .intro_tekst_box {
+        max-width: 100%;
+        text-align: left;
+        margin-right: auto;
+        margin-left: auto;
+        margin-right: 15vw;
+        margin-left: 15vw;
+        
+    }
+
+    .intro_tekst h1 {
+        position: relative;
+        color: #fff;
+        font-family: Overskrift;
+        font-size: 6vw;
+        letter-spacing: 1px;
+        padding-bottom: 5px;
+    }
+
+    .intro_tekst p {
+        position: relative;
+        letter-spacing: 1px;
+        font-size: 15px;
+        padding-bottom: 5px;
+        color: #fff;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: tekst;
+    }
+
+    .baggrund {
+        background-color: #008f8a;
+        width: 100%;
+        margin-top: -120px;
+        position: relative;
+        padding-top: 120px;
+        padding-bottom: 100px;
+    }
+
+    .events {
+        background-color: #008f8a;
+        display: unset;
+        position: relative;
+        max-width: 100%;
+    }
+
+    .event_Box {
+        margin-bottom: 20px;
+        position: relative;
+        max-width: 100%;
+        border-radius: 0px 50px 0px 50px;
+        background-color: #074f4b;
+        border: 1px solid #fff;
+        margin: 5vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        z-index: 600;
+    }
+
+    .billede_Box {
+        width: 100%;
+        height: 50vw;
+        overflow: hidden;
+    }
+
+    .event_Box img {
+        max-width: 100%;
+        border-radius: 0px 50px 0px 0px;
+    }
+
+    .dato_Box {
+        position: absolute;
+        display: block;
+        background-color: #fff;
+        height: 8%;
+        width: 10%;
+        top: 0px;
+        z-index: 5;
+    }
+
+    .dato_Box p {
+        position: absolute;
+        color: black;
+        font-family: tekst;
+        font-size: 3vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text_Box {
+        max-width: 85%;
+        padding: 20px;
+        margin-top: -40px;
+        padding-left: 20px;
+        color: #fff;
+    }
+
+    .text_Box h2 {
+        font-family: Overskrift;
+        max-width: 100%;
+    }
+
+    .text_Box p {
+        margin-top: 10px;
+        font-family: tekst;
+        max-width: 100%;
+        letter-spacing: 1px;
+        font-size: 15px;
+    }
+    
+    .text_Box a {
+        position: absolute;
+        max-width: 100%;
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        right: 5px;
+        bottom: 5px;
+    }
+
+
+    .frivillig {
+        position: relative;
+        background-color: #074f4b;
+        height: 350px;
+        z-index: 500;
+        margin-top: -100px;
+        -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+
+    }
+
+    .frivillig p {
+        position: relative;
+        top: 20%;
+        max-width: 100%;
+        font-size: 15px;
+        letter-spacing: 1px;
+        padding: 0vw;
+        margin-left: 15vw;
+        margin-right: 15vw;
+        color: #fff;
+        font-family: tekst;
+    }
+
+    .some a {
+        position: relative;
+        top: 0;
+        text-decoration: none;
+        color: #262626;
+        font-size: 35px;
+    }
+
+    .some div {
+        display: flex;
+        background-color: #074f4b;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        margin: 15px;
+        margin-top: 80px;
+
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    nav {
+        display: none;
+    }
+
+    .topnav {
+        display: block;
+        z-index: 999;
+    }
+
+    .kalender_box {
+        display: none;
+    }
+
+    .section1 {
+        background-color: #074f4b;
+        position: relative;
+        width: 100%;
+        height: 100px;
+    }
+
+    .intro_tekst {
+        height: 250px;
+        background-color: #074f4b;
+        position: relative;
+        z-index: 10;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+        padding: 5vw;
+    }
+
+    .intro_tekst_box {
+        max-width: 100%;
+        text-align: left;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .intro_tekst h1 {
+        position: relative;
+        color: #fff;
+        font-family: Overskrift;
+        font-size: 6vw;
+        letter-spacing: 1px;
+        padding-bottom: 5px;
+    }
+
+    .intro_tekst p {
+        position: relative;
+        letter-spacing: 1px;
+        font-size: 15px;
+        padding-bottom: 5px;
+        color: #fff;
+        margin-right: auto;
+        margin-left: auto;
+        font-family: tekst;
+    }
+
+    .baggrund {
+        background-color: #008f8a;
+        width: 100%;
+        margin-top: -120px;
+        position: relative;
+        padding-top: 120px;
+        padding-bottom: 100px
+    }
+
+    .events {
+        background-color: #008f8a;
+        display: unset;
+        position: relative;
+        max-width: 100%;
+    }
+
+    .event_Box {
+        margin-bottom: 20px;
+        position: relative;
+        max-width: 100%;
+        border-radius: 0px 50px 0px 50px;
+        background-color: #074f4b;
+        border: 1px solid #fff;
+        margin: 5vw;
+        margin-bottom: 35px;
+        z-index: 600;
+    }
+
+    .billede_Box {
+        width: 100%;
+        height: 50vw;
+        overflow: hidden;
+    }
+
+    .event_Box img {
+        max-width: 100%;
+        border-radius: 0px 50px 0px 0px;
+    }
+
+    .dato_Box {
+        position: absolute;
+        display: block;
+        background-color: #fff;
+        height: 8%;
+        width: 10%;
+        top: 0px;
+        z-index: 5;
+    }
+
+    .dato_Box p {
+        position: absolute;
+        color: black;
+        font-family: tekst;
+        font-size: 3vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text_Box {
+        position: relative;
+        max-width: 85%;
+        padding: 20px;
+        padding-left: 20px;
+        color: #fff;
+        margin-top: -20px;
+    }
+
+    .text_Box h2 {
+        font-family: Overskrift;
+        max-width: 100%;
+    }
+
+    .text_Box p {
+        margin-top: 10px;
+        font-family: tekst;
+        max-width: 100%;
+        letter-spacing: 1px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .text_Box a {
+        position: absolute;
+        max-width: 100%;
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        right: 5px;
+        bottom: 5px;
+    }
+
+
+    .frivillig {
+        position: relative;
+        background-color: #074f4b;
+        height: 350px;
+        z-index: 500;
+        margin-top: -100px;
+        -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+
+    }
+
+    .frivillig p {
+        position: relative;
+        top: 20%;
+        max-width: 100%;
+        font-size: 15px;
+        letter-spacing: 1px;
+        padding: 5vw;
+        margin-right: auto;
+        margin-left: auto;
+        color: #fff;
+        font-family: tekst;
+    }
+
+    .some a {
+        position: relative;
+        top: 0;
+        text-decoration: none;
+        color: #262626;
+        font-size: 35px;
+    }
+
+    .some div {
+        display: flex;
+        background-color: #074f4b;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        margin: 15px;
+        margin-top: 80px;
+
+    }
+
+}
