@@ -280,9 +280,158 @@ nav.menu_baggrund ul li ul li:hover {
 
 /*--------------------------Indhold----------------------*/
 
+.intro {
+    background-color: #156a5a;
+    height: 250px;
+    position: relative;
+    z-index: 10;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+}
+
+.intro_tekst {
+    max-width: 63%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.intro_tekst h1 {
+    position: relative;
+    color: #fff;
+    font-family: Overskrift;
+    font-size: 3vw;
+    letter-spacing: 2px;
+}
+
+.intro_tekst p {
+    position: relative;
+    letter-spacing: 1px;
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: tekst;
+}
 
 
+.opslag {
+    background-color: #008f8a;
+    height: 1000px;
+    margin-top: -75px;
+    max-width: 100vw;
+}
 
+.opslag_flex {
+    padding-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.opslag_box {
+    margin: 25px;
+    display: flex;
+    max-width: 300px;
+    max-height: 125px;
+    background-color: #fff;
+}
+
+.opslag_billede {
+    height: 100%;
+    width: 40%;
+}
+
+.opslag_billede img {
+    width: 100%;
+    height: 100%;
+}
+
+.opslag_tekst {
+    width: 60%;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+
+.opslag_tekst h2 {
+    font-family: Overskrift;
+    font-size: 15px;
+}
+
+.opslag_tekst p {
+    font-family: tekst;
+    font-size: 10px;
+}
+
+
+.opslag_tekst button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 9999999;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 16px 16px;
+    background-color: #156A5A;
+    color: white;
+}
+
+.modal-body {
+    padding: 16px 16px;
+    display: flex;
+}
 
 /*--------------------------Indhold slut----------------------*/
 
@@ -374,14 +523,6 @@ footer {
         z-index: 999999;
     }
 
-    .container {
-        display: none;
-    }
-
-    .container_mobil {
-        display: unset;
-    }
-
     .section1 {
         background-color: #156A5A;
         width: 100%;
@@ -401,130 +542,6 @@ footer {
         clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
     }
 
-    .intro_Box {
-        padding-top: 5vw;
-        padding-bottom: 5vw;
-        margin-left: 15vw;
-        margin-right: 15vw;
-    }
-
-    h2 {
-        margin-top: 0%;
-        text-align: center;
-        font-size: 5vw;
-    }
-
-    .it {
-        color: white;
-        font-family: Tekst;
-        font-size: 15px;
-        width: 100%;
-        padding: 0px;
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0px;
-    }
-
-    .baggrund {
-        background-color: #008f8a;
-        width: 100%;
-        margin-top: -120px;
-        position: relative;
-        padding-top: 120px;
-        padding-bottom: 100px;
-        z-index: -1;
-    }
-
-    .events {
-        background-color: #008f8a;
-        display: unset;
-        position: relative;
-        max-width: 100%;
-    }
-
-    .event_Box {
-        margin-bottom: 20px;
-        position: relative;
-        max-width: 100%;
-        border-radius: 0px 50px 0px 50px;
-        background-color: #074f4b;
-        border: 1px solid #fff;
-        margin: 5vw;
-        margin-left: 15vw;
-        margin-right: 15vw;
-        z-index: 600;
-    }
-
-    .billede_Box {
-        width: 100%;
-        height: 50vw;
-        overflow: hidden;
-    }
-
-    .event_Box img {
-        max-width: 100%;
-        border-radius: 0px 49px
-        0px 0px;
-    }
-
-    .text_Box {
-        position: relative;
-        max-width: 100%;
-        padding: 20px;
-        padding-left: 20px;
-        color: #fff;
-        margin-top: -20px;
-    }
-
-    .text_Box h2 {
-        font-family: Overskrift;
-        max-width: 100%;
-    }
-
-    .text_Box p {
-        margin-top: 10px;
-        font-family: tekst;
-        max-width: 95%;
-        letter-spacing: 1px;
-        font-size: 15px;
-        margin-bottom: 20px;
-    }
-
-    .text_Box a {
-        position: absolute;
-        max-width: 100%;
-        text-decoration: none;
-        color: white;
-        font-size: 30px;
-        right: 5px;
-        bottom: 5px;
-    }
-    
-
-    .some {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
-
-    .some a {
-        position: relative;
-        top: 0;
-        text-decoration: none;
-        color: #262626;
-        font-size: 35px;
-    }
-
-    .some div {
-        display: flex;
-        background-color: #074f4b;
-        border-radius: 50%;
-        height: 50px;
-        width: 50px;
-        justify-content: center;
-        margin: 15px;
-        margin-top: 80px;
-    }
 
     @media (max-width: 650px) {
 
@@ -546,98 +563,8 @@ footer {
             position: relative;
             width: 100%;
             height: 80px;
+
+
+
         }
-
-        .intro_tekst {
-            height: 250px;
-            background-color: #074f4b;
-            position: relative;
-            z-index: 10;
-            -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
-            clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
-            padding: 5vw;
-        }
-
-        .intro_Box {
-            padding: 5vw;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-
-        .baggrund {
-            background-color: #008f8a;
-            width: 100%;
-            margin-top: -120px;
-            position: relative;
-            padding-top: 120px;
-            padding-bottom: 100px
-        }
-
-        .events {
-            background-color: #008f8a;
-            display: unset;
-            position: relative;
-            max-width: 100%;
-        }
-
-        .event_Box {
-            margin-bottom: 0px;
-            position: relative;
-            max-width: 100%;
-            border-radius: 0px 50px 0px 50px;
-            background-color: #074f4b;
-            border: 1px solid #fff;
-            margin: 5vw;
-            margin-bottom: 35px;
-            z-index: 600;
-        }
-
-        .billede_Box {
-            width: 100%;
-            height: 50vw;
-            overflow: hidden;
-        }
-
-        .event_Box img {
-            max-width: 100%;
-            border-radius: 0px 50px
-            0px 0px;
-        }
-
-        .text_Box {
-            position: relative;
-            max-width: 100%;
-            padding: 20px;
-            padding-left: 20px;
-            color: #fff;
-            margin-top: -20px;
-        }
-
-        .text_Box h2 {
-            font-family: Overskrift;
-            max-width: 100%;
-        }
-
-        .text_Box p {
-            margin-top: 10px;
-            font-family: tekst;
-            max-width: 95%;
-            letter-spacing: 1px;
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
-
-        .text_Box a {
-            position: absolute;
-            max-width: 100%;
-            text-decoration: none;
-            color: white;
-            font-size: 30px;
-            right: 5px;
-            bottom: 5px;
-        }
-
-
     }
-}
