@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="Javascript/Javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 </head>
 
 <body>
@@ -66,136 +68,363 @@
         <div class="intro_tekst">
             <h1>OPSLAGSTAVLE</h1>
             <p>På denne side kan du følge med i vores opslagstavle, som vi også har til at hænge nede ved byttecentralen. Hvis du søger noget bestemt eller har brug for at komme af med noget, som du ikke har ressourcer til at aflevere nede på pladsen, så kan det deles her.</p>
-
         </div>
 
     </div>
 
     <div class="opslag">
+      
+       <div class="kategori_et">
+           <h2>Tilbyder</h2>
+       </div>
+       
+        <div class="opslag_flex">
 
+            <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.</p>
+                        
+                    <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
 
-            <div class="opslag_flex">
-
-                <div class="opslag_box">
-                    <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
-                    <div class="opslag_tekst">
-                        <h2>Skab</h2>
-                        <p>Hej! Mit navn er Lise
-                            og jeg er netop flyttet
-                            i ny lejlighed og søger
-                            derfor et tøjskab i
-                            størrelsen 200x150 m.
-                            Ring på +45 89 76 56 43 :-)</p>
-                        <button id="myBtn">Se mere</button>
-
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
-
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <span class="close">&times;</span>
-                                    <h2>Modal Header</h2>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
-                                    <div class="opslag_tekst">
-                                        <h2>Skab</h2>
-                                        <p>Hej! Mit navn er Lise
-                                            og jeg er netop flyttet
-                                            i ny lejlighed og søger
-                                            derfor et tøjskab i
-                                            størrelsen 200x150 m.
-                                            Ring på +45 89 76 56 43 :-)</p>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <script>
-                                // Get the modal
-                                var modal = document.getElementById("myModal");
-
-                                // Get the button that opens the modal
-                                var btn = document.getElementById("myBtn");
-
-                                // Get the <span> element that closes the modal
-                                var span = document.getElementsByClassName("close")[0];
-
-                                // When the user clicks the button, open the modal 
-                                btn.onclick = function() {
-                                    modal.style.display = "block";
-                                }
-
-                                // When the user clicks on <span> (x), close the modal
-                                span.onclick = function() {
-                                    modal.style.display = "none";
-                                }
-
-                                // When the user clicks anywhere outside of the modal, close it
-                                window.onclick = function(event) {
-                                    if (event.target == modal) {
-                                        modal.style.display = "none";
-                                    }
-                                }
-                            </script>
-                        </div>
+                    <div id="ex1" class="modal">
+                        <p>Thanks for clicking. That felt good.</p>
+                        <a href="#" rel="modal:close">Close</a>
                     </div>
 
-
-
+                    <!-- The Modal -->
 
                 </div>
 
+            </div>
+            
+            
+                       <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex2" rel="modal:open">Open Modal</a></p>
+
+                    <div id="ex2" class="modal">
+                        <p>Thanks for clicking. That felt good hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- The Modal -->
+
+                </div>
+
+            </div>
+            
+                <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex2" rel="modal:open">Open Modal</a></p>
+
+                    <div id="ex2" class="modal">
+                        <p>Thanks for clicking. That felt good hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- The Modal -->
+
+                </div>
+
+            </div>
+            
+                <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex2" rel="modal:open">Open Modal</a></p>
+
+                    <div id="ex2" class="modal">
+                        <p>Thanks for clicking. That felt good hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- The Modal -->
+
+                </div>
+
+            </div>
+            
+                <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex2" rel="modal:open">Open Modal</a></p>
+
+                    <div id="ex2" class="modal">
+                        <p>Thanks for clicking. That felt good hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- The Modal -->
+
+                </div>
+
+            </div>
+            
+                <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex2" rel="modal:open">Open Modal</a></p>
+
+                    <div id="ex2" class="modal">
+                        <p>Thanks for clicking. That felt good hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- The Modal -->
+
+                </div>
 
             </div>
 
 
+        </div>
+        
+        <div class="opslag_flex">
 
-            <!-----------------------------------------Footer------------------------------------->
+            <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex1" rel="modal:open">Open Modal</a></p>
 
-            <footer>
-
-                <div class="some">
-                    <div>
-                        <a href="https://www.facebook.com/ReUseAarhus/"><i class="fab fa-facebook-f"></i></a>
+                    <div id="ex1" class="modal">
+                        <p>Thanks for clicking. That felt good.</p>
+                        <a href="#" rel="modal:close">Close</a>
                     </div>
 
-                    <div>
-                        <a href="https://www.instagram.com/explore/locations/720612896/reuse-aarhus/"><i class="fab fa-instagram"></i></a>
-                    </div>
-
-                    <div>
-                        <a href="https://www.youtube.com/user/aakvideosite"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-
-                <div class="info">
-                    <div>
-                        <h2>Adresse</h2>
-                        <p>Jægergårdsgade 164 C.</p>
-                        <p>Aarhus C</p>
-                    </div>
-                    <div>
-                        <h2>Åbningstider</h2>
-                        <p>Kl. 12 - 17 hver dag</p>
-                        <p>*Der kan være andre åbningstider i forbindelse med helligdage*</p>
-                    </div>
-                    <div>
-                        <h2>Kontakt</h2>
-                        <p>Affaldvarme@Aarhus.dk</p>
-                        <p>Tlf: 89 40 15 00</p>
-                    </div>
+                    <!-- The Modal -->
 
                 </div>
 
-                <div class="copyright">
-                    <p>REUSE</p>
+            </div>
+            
+            
+                       <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex2" rel="modal:open">Open Modal</a></p>
+
+                    <div id="ex2" class="modal">
+                        <p>Thanks for clicking. That felt good hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- The Modal -->
+
                 </div>
 
-            </footer>
+            </div>
+            
+                <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex2" rel="modal:open">Open Modal</a></p>
 
-            <!-----------------------------------Footer slut------------------------------------->
+                    <div id="ex2" class="modal">
+                        <p>Thanks for clicking. That felt good hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- The Modal -->
+
+                </div>
+
+            </div>
+            
+                <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex2" rel="modal:open">Open Modal</a></p>
+
+                    <div id="ex2" class="modal">
+                        <p>Thanks for clicking. That felt good hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- The Modal -->
+
+                </div>
+
+            </div>
+            
+                <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex2" rel="modal:open">Open Modal</a></p>
+
+                    <div id="ex2" class="modal">
+                        <p>Thanks for clicking. That felt good hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- The Modal -->
+
+                </div>
+
+            </div>
+            
+                <div class="opslag_box">
+                <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
+                <div class="opslag_tekst">
+                    <h2>Skab</h2>
+                    <p>Hej! Mit navn er Lise
+                        og jeg er netop flyttet
+                        i ny lejlighed og søger
+                        derfor et tøjskab i
+                        størrelsen 200x150 m.
+                        Ring på +45 89 76 56 43 :-)</p>
+                        
+                    <p><a href="#ex2" rel="modal:open">Open Modal</a></p>
+
+                    <div id="ex2" class="modal">
+                        <p>Thanks for clicking. That felt good hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That felt good.hanks for clicking. That </p>
+                        <a href="#" rel="modal:close">Close</a>
+                    </div>
+
+                    <!-- The Modal -->
+
+                </div>
+
+            </div>
+
+
+        </div>
+        
+        
+
+
+
+        <!-----------------------------------------Footer------------------------------------->
+
+        <footer>
+
+            <div class="some">
+                <div>
+                    <a href="https://www.facebook.com/ReUseAarhus/"><i class="fab fa-facebook-f"></i></a>
+                </div>
+
+                <div>
+                    <a href="https://www.instagram.com/explore/locations/720612896/reuse-aarhus/"><i class="fab fa-instagram"></i></a>
+                </div>
+
+                <div>
+                    <a href="https://www.youtube.com/user/aakvideosite"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="info">
+                <div>
+                    <h2>Adresse</h2>
+                    <p>Jægergårdsgade 164 C.</p>
+                    <p>Aarhus C</p>
+                </div>
+                <div>
+                    <h2>Åbningstider</h2>
+                    <p>Kl. 12 - 17 hver dag</p>
+                    <p>*Der kan være andre åbningstider i forbindelse med helligdage*</p>
+                </div>
+                <div>
+                    <h2>Kontakt</h2>
+                    <p>Affaldvarme@Aarhus.dk</p>
+                    <p>Tlf: 89 40 15 00</p>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <p>REUSE</p>
+            </div>
+
+        </footer>
+
+        <!-----------------------------------Footer slut------------------------------------->
 
 
 </body>
