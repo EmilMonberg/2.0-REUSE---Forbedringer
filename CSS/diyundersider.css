@@ -281,7 +281,7 @@ nav.menu_baggrund ul li ul li:hover {
     grid-column-gap: 70px;
     grid-template-columns: 1fr 3fr;
     grid-template-areas:
-        "item1  item2"
+        "item1 item2"
         "item3 item2"
 
 }
@@ -309,8 +309,6 @@ nav.menu_baggrund ul li ul li:hover {
     padding-bottom: 200px;
     max-width: 100%;
     position: relative;
-    z-index: ;
-    height: 950px;
     margin-top: -200px;
 
 
@@ -641,7 +639,6 @@ footer {
     .content {
         padding: 25px;
         background-color: #074f4b;
-        height: 1250px;
         padding-top: 200px;
         margin-top: -150px;
         z-index: 1;
