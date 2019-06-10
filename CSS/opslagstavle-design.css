@@ -275,13 +275,14 @@ nav.menu_baggrund ul li ul li:hover {
 .section1 {
     background-color: #156A5A;
     width: 100%;
-    height: 10vw;
+    height: 200px;
 }
 
 /*--------------------------Indhold----------------------*/
 
 .intro {
-    background-color: #156a5a;
+    background-color: #156A5A;
+    max-width: 100vw;
     height: 250px;
     position: relative;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
@@ -289,7 +290,7 @@ nav.menu_baggrund ul li ul li:hover {
 }
 
 .intro_tekst {
-    max-width: 70%;
+    width: 980px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -298,7 +299,7 @@ nav.menu_baggrund ul li ul li:hover {
     position: relative;
     color: #fff;
     font-family: Overskrift;
-    font-size: 3vw;
+    font-size: 40px;
     letter-spacing: 2px;
 }
 
@@ -308,82 +309,167 @@ nav.menu_baggrund ul li ul li:hover {
     font-size: 18px;
     padding-bottom: 5px;
     color: #fff;
-    margin-right: auto;
-    margin-left: auto;
+    width: 75%;
     font-family: tekst;
 }
 
-
-.opslag {
-    background-color: #008f8a;
+.opslag_tilbyder {
+    background-color: #008F8A;
     margin-top: -75px;
     max-width: 100vw;
 }
 
-.opslag_flex {
-    padding-top: 50px;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 70%;
-     margin-right: auto;
-    margin-left: auto;
+.opslag_søger {
+    background-color: #008F8A;
+    max-width: 100vw;
+    padding-bottom: 75px;
 }
 
 .kategori_et {
     position: relative;
-    padding-top: 100px;
-    width: 70%;
+    padding-top: 75px;
+    margin-bottom: 5px;
+    width: 1000px;
     margin-right: auto;
     margin-left: auto;
     color: #fff;
     border-bottom: 1px solid #fff;
     font-family: overskrift;
+
+}
+
+.kategori_et a {
+    position: absolute;
+    right: 0;
+    bottom: 6px;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: tekst;
+    padding: 12px;
+    background-color: #00A878;
+    font-size: 15px;
+    transition: .2s;
+}
+
+.kategori_et a:hover {
+    transform: scale(1.05);
+
+}
+
+
+.opslag_flex {
+    padding-bottom: 30px;
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 550px;
+    overflow: auto;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+}
+
+.opslag_flex::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.opslag_flex::-webkit-scrollbar {
+    width: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.opslag_flex::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    padding: 50px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .opslag_box {
-    margin: 10px;
     display: flex;
-    max-width: 250px;
-    max-height: 100px;
-    background-color: #fff;
+    margin-top: 15px;
+    margin-right: 25px;
+    width: 30.8%;
+    height: 150px;
+    background-color: #156A5A;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -webkit-box-shadow: 0 0 1px #000;
+    -moz-box-shadow: 0 0 1px #000;
+    -o-box-shadow: 0 0 1px #000;
+    -ms-box-shadow: 0 0 1px #000;
+    box-shadow: 0 0 1px #000;
 }
 
 .opslag_billede {
     height: 100%;
     width: 40%;
+    overflow: hidden;
 }
 
 .opslag_billede img {
     width: 100%;
     height: 100%;
+    transition: transform .2s ease;
+}
+
+.opslag_billede img:hover {
+    transform: scale(1.2);
 }
 
 .opslag_tekst {
     width: 60%;
     height: 100%;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     position: relative;
+    overflow: hidden;
+    color: #fff;
 }
 
 .opslag_tekst h2 {
     font-family: Overskrift;
-    font-size: 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
 }
 
 .opslag_tekst p {
     font-family: tekst;
-    font-size: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding-top: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
-
-.opslag_tekst a{
+.dato {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    bottom: 6px;
+    font-family: tekst;
+    font-size: 10px;
+    font-style: italic;
+
 }
+
+.opslag_tekst a {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    font-size: 22px;
+    color: #fff;
+}
+
 
 /*--------------------------Indhold slut----------------------*/
 
@@ -481,18 +567,61 @@ footer {
         height: 80px;
     }
 
-    .intro {
-        padding-top: 40px;
-        width: 100%;
-        margin-top: 0;
-        height: 375px;
-        background-color: #156A5A;
-        font-family: Overskrift;
-        color: white;
-        z-index: 300;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+    .intro_tekst {
+        width: 580px;
+        margin-right: auto;
+        margin-left: auto;
     }
+
+    .intro_tekst h1 {
+        position: relative;
+        color: #fff;
+        font-family: Overskrift;
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+
+    .intro_tekst p {
+        position: relative;
+        letter-spacing: 1px;
+        font-size: 18px;
+        padding-bottom: 5px;
+        color: #fff;
+        width: 100%;
+        font-family: tekst;
+    }
+
+    .opslag_flex {
+        padding-top: 50px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .kategori_et {
+        position: relative;
+        padding-top: 100px;
+        width: 580px;
+        margin-right: auto;
+        margin-left: auto;
+        color: #fff;
+        border-bottom: 1px solid #fff;
+        font-family: overskrift;
+    }
+
+    .opslag_box {
+        display: flex;
+        margin: 10px;
+        width: 46.61%;
+        max-height: 150px;
+        background-color: #156A5A;
+    }
+
+
 
 
     @media (max-width: 650px) {
@@ -510,13 +639,61 @@ footer {
             display: none;
         }
 
-        .section1 {
-            background-color: #074f4b;
-            position: relative;
-            width: 100%;
-            height: 80px;
 
-
+        .intro_tekst {
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
 
         }
+
+        .intro_tekst h1 {
+            position: relative;
+            color: #fff;
+            font-family: Overskrift;
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+        .intro_tekst p {
+            letter-spacing: 1px;
+            font-size: 12px;
+            padding-bottom: 5px;
+            color: #fff;
+            font-family: tekst;
+        }
+
+
+        .opslag_flex {
+            padding-top: 50px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .kategori_et {
+            position: relative;
+            padding-top: 100px;
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+            color: #fff;
+            border-bottom: 1px solid #fff;
+            font-family: overskrift;
+        }
+
+        .opslag_box {
+            display: flex;
+            margin: 10px;
+            width: 100%;
+            max-height: 150px;
+            background-color: #156A5A;
+        }
+
+
+
     }
+}
