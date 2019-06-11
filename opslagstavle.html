@@ -9,9 +9,15 @@
     <link rel="shortcut icon" href="Billeder/favicon.png" type="image/x-icon">
     <link rel="icon" href="Billeder/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS/opslagstavle-design.css">
+    <link rel="stylesheet" href="CSS/jquery.modal.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/lightslider.js"></script>
     <script src="Javascript/Javascript.js"></script>
+    <script src="Javascript/MultiClamp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
 </head>
 
 <body>
@@ -66,137 +72,1197 @@
         <div class="intro_tekst">
             <h1>OPSLAGSTAVLE</h1>
             <p>På denne side kan du følge med i vores opslagstavle, som vi også har til at hænge nede ved byttecentralen. Hvis du søger noget bestemt eller har brug for at komme af med noget, som du ikke har ressourcer til at aflevere nede på pladsen, så kan det deles her.</p>
-
         </div>
 
     </div>
 
-    <div class="opslag">
+    <div class="opslag_tilbyder">
 
+        <div class="kategori_et">
+            <h2>TILBYDES!<span><a href="login.html"> + Tilføj opslag</a></span></h2>
+        </div>
 
-            <div class="opslag_flex">
+        <div class="opslag_flex">
 
-                <div class="opslag_box">
-                    <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
-                    <div class="opslag_tekst">
-                        <h2>Skab</h2>
-                        <p>Hej! Mit navn er Lise
-                            og jeg er netop flyttet
-                            i ny lejlighed og søger
-                            derfor et tøjskab i
-                            størrelsen 200x150 m.
-                            Ring på +45 89 76 56 43 :-)</p>
-                        <button id="myBtn">Se mere</button>
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex1" rel="modal:open"><img src="Billeder/havestol.png"></a></div>
+                <div class="opslag_tekst">
+                    <h2>Havestole </h2>
+                    <p> Vi har solgt vores kolonihavehus, og har derfor ikke brug for vores havestole længere.</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
 
-                        <!-- The Modal -->
-                        <div id="myModal" class="modal">
+                    <p><a href="#ex1" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
 
-                            <!-- Modal content -->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <span class="close">&times;</span>
-                                    <h2>Modal Header</h2>
+                    <div id="ex1" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/havestol.png"> </div>
+                            <div class="modal_tekst">
+                                <h2>Havestole </h2>
+
+                                <p>
+                                    Vi har solgt vores kolonihavehus, og har derfor ikke brug for vores havestole længere. Der er fire styks og de er i ganske pæn stand! <br><br>
+
+                                    Kontakt mig endelig vis du vil vide mere.
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Birthe Hansen</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
                                 </div>
-                                <div class="modal-body">
-                                    <div class="opslag_billede"><img src="Billeder/baenk.jpg"></div>
-                                    <div class="opslag_tekst">
-                                        <h2>Skab</h2>
-                                        <p>Hej! Mit navn er Lise
-                                            og jeg er netop flyttet
-                                            i ny lejlighed og søger
-                                            derfor et tøjskab i
-                                            størrelsen 200x150 m.
-                                            Ring på +45 89 76 56 43 :-)</p>
-                                    </div>
-                                </div>
+
 
                             </div>
-
-                            <script>
-                                // Get the modal
-                                var modal = document.getElementById("myModal");
-
-                                // Get the button that opens the modal
-                                var btn = document.getElementById("myBtn");
-
-                                // Get the <span> element that closes the modal
-                                var span = document.getElementsByClassName("close")[0];
-
-                                // When the user clicks the button, open the modal 
-                                btn.onclick = function() {
-                                    modal.style.display = "block";
-                                }
-
-                                // When the user clicks on <span> (x), close the modal
-                                span.onclick = function() {
-                                    modal.style.display = "none";
-                                }
-
-                                // When the user clicks anywhere outside of the modal, close it
-                                window.onclick = function(event) {
-                                    if (event.target == modal) {
-                                        modal.style.display = "none";
-                                    }
-                                }
-                            </script>
                         </div>
+                        <a href="#" rel="modal:close"></a>
+
                     </div>
-
-
-
 
                 </div>
 
+            </div>
+
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex2" rel="modal:open"><img src="Billeder/tallerken.png"></a></div>
+                <div class="opslag_tekst">
+                    <h2>Tallerkener</h2>
+                    <p id="textContainer"> Restaurant Guldregnen udskifter alle vores tallerkener, og vil derfor med glæde dele vores gamle ud.</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+
+
+                    <p><a href="#ex2" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex2" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/tallerken.png"> </div>
+                            <div class="modal_tekst">
+                                <h2>Tallerkener</h2>
+                                <p>
+                                    Restaurant Guldregnen udskifter alle vores tallerkener, og vil derfor med glæde dele vores gamle ud.
+
+
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Ole bonderup</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex3" rel="modal:open"><img src="Billeder/natlampe.png"></a></div>
+                <div class="opslag_tekst">
+                    <h2>Natlampe</h2>
+                    <p> Jeg forsøger lige at hjælpe min mormor af med denne fine natlampe</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+
+                    <p><a href="#ex3" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex3" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/natlampe.png"> </div>
+                            <div class="modal_tekst">
+                                <h2>Natlampe </h2>
+                                <p>
+                                    Jeg forsøger lige at hjælpe min mormor af med denne lampe
+
+                                    - håber den kan pynte en andens natbord! :)
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Marianna Larsen</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex4" rel="modal:open"><img src="Billeder/Opslag/taboret.jpg"></a></div>
+                <div class="opslag_tekst">
+                    <h2>Taburet - rustik</h2>
+                    <p> Denne lille taburet har tidligere været brugt til at male vores lejlighed..</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+                    <p>
+
+                    </p>
+
+                    <p><a href="#ex4" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex4" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/Opslag/taboret.jpg"> </div>
+                            <div class="modal_tekst">
+                                <h2>Taboret - rustik</h2>
+                                <p>
+                                    Denne lille taburet har tidligere været brugt til at male vores lejlighed, men nu fungerer den rigtig godt som bord til pynt!
+                                    Vi har i hvert fald været glade for den :-)
+                                    Der er lidt malerpletter på den!
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Louise Møller</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex5" rel="modal:open"><img src="Billeder/Opslag/dart.jpg"></a></div>
+                <div class="opslag_tekst">
+                    <h2>Dartskive </h2>
+                    <p> Vi giver vores dartskive til et nyt hjem.
+                        Den har gjort det godt i vores lille hybel! :D</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+                    <p>
+
+                    </p>
+
+                    <p><a href="#ex5" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex5" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/Opslag/dart.jpg"> </div>
+                            <div class="modal_tekst">
+                                <h2> Dartskive </h2>
+                                <p>
+                                    Vi giver vores dartskive til et nyt hjem.
+                                    Den har gjort det godt i vores lille hybel! :D
+
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Marcus Torp Vestergård</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex6" rel="modal:open"><img src="Billeder/Opslag/V%C3%A6rkt%C3%B8j-rod.jpg"></a></div>
+                <div class="opslag_tekst">
+                    <h2>Gratis Værktøj!</h2>
+                    <p> Jeg har en hulens masse værktøj som ligger og roder i mit værksted.</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+                    <p>
+
+                    </p>
+
+                    <p><a href="#ex6" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex6" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/Opslag/V%C3%A6rkt%C3%B8j-rod.jpg"> </div>
+                            <div class="modal_tekst">
+                                <h2>Gratis Værktøj! </h2>
+                                <p>
+                                    Hej alle sammen!
+
+
+                                    Jeg har en hulens masse værktøj som ligger og roder i mit værksted. Derfor vil jeg gerne give noget af det væk!
+                                    Noget af det er ikke i vildt god stand, men jeg står inde for det hele! ;)
+
+                                    Kontakt mig endelig hvis du er interesseret.
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Kurt Andersen</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex7" rel="modal:open"><img src="Billeder/Opslag/books.jpg"></a></div>
+                <div class="opslag_tekst">
+                    <h2>Sjove bøger :-) </h2>
+                    <p> Vores børn er fløjet fra reden, og nu har vi rigtig mange bøger vi ikke længere bruger.</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+                    <p>
+
+                    </p>
+
+                    <p><a href="#ex7" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex7" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/Opslag/books.jpg"> </div>
+                            <div class="modal_tekst">
+                                <h2>Sjove bøger :-) </h2>
+                                <p>
+                                    Vores børn er fløjet fra reden, og nu har vi rigtig mange bøger vi ikke længere bruger.
+                                    Egner sig bedst til børn i alderen 3-14.
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Lone Jespersen</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex8" rel="modal:open"><img src="Billeder/Opslag/stof%20stol.jpg"></a></div>
+                <div class="opslag_tekst">
+                    <h2>Dejlig lænestol</h2>
+                    <p> Jeg har denne flotte lænestol stående på loftet, og det synes jeg egentlig er en skam!</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+                    <p>
+
+                    </p>
+
+                    <p><a href="#ex8" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex8" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/Opslag/stof%20stol.jpg"> </div>
+                            <div class="modal_tekst">
+                                <h2>Dejlig stof stol</h2>
+                                <p>
+                                    Jeg har denne flotte lænestol stående på loftet, og det synes jeg egentlig er en skam!
+                                    Har længe ville aflevere den på REUSE men den kan ikke være i min bil.
+
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Ove Østergaard Poulsen</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex9" rel="modal:open"><img src="Billeder/Opslag/vogn.jpg"></a></div>
+                <div class="opslag_tekst">
+                    <h2>Trækvogn </h2>
+                    <p> Jeg har en gammel trækvogn stående i garagen, som jeg kunne forestille mig nogle kommende festivalgæster kunne bruge! </p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+                    <p>
+
+                    </p>
+
+                    <p><a href="#ex9" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex9" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/Opslag/vogn.jpg"> </div>
+                            <div class="modal_tekst">
+                                <h2>Hjemmelavet trækvogn </h2>
+                                <p>
+                                    Jeg har en gammel trækvogn stående i garagen, som jeg kunne forestille mig nogle kommende festivalgæster kunne bruge!
+
+
+                                    God sommer!
+
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Morten Klein</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex10" rel="modal:open"><img src="Billeder/Opslag/babyt%C3%B8j.jpg"></a></div>
+                <div class="opslag_tekst">
+                    <h2> Sødt babytøj </h2>
+                    <p> Vi fik foræret en masse tøj til vores datter da vi fik hende, og nu vil vi gerne dele det videre!</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+                    <p>
+
+                    </p>
+
+                    <p><a href="#ex10" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex10" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/Opslag/babyt%C3%B8j.jpg"> </div>
+                            <div class="modal_tekst">
+                                <h2> Sødt babytøj</h2>
+                                <p>
+                                    Vi fik foræret en masse tøj til vores datter da vi fik hende, og nu vil vi gerne dele det videre!
+                                    Der er lidt af hvert :)
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Therese Juul Hansen</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex10" rel="modal:open"><img src="Billeder/Opslag/maleri.jpg"></a></div>
+                <div class="opslag_tekst">
+                    <h2> Mit kunst </h2>
+                    <p> Jeg er en progressiv ung kunstner, der er ved at tømme lidt ud i mine værker.</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+                    <p>
+
+                    </p>
+
+                    <p><a href="#ex10" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex10" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/Opslag/maleri.jpg"> </div>
+                            <div class="modal_tekst">
+                                <h2> Mit kunst </h2>
+                                <p>
+                                    Jeg er en progressiv ung kunstner, der er ved at tømme lidt ud i mine værker. Så hvis du kan lide det, er der mere hvor det kommer fra.
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Snorre Heino</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex10" rel="modal:open"><img src="Billeder/Opslag/cykel.jpg"></a></div>
+                <div class="opslag_tekst">
+                    <h2>Brugt cykel </h2>
+                    <p> Min dreng er blevet for stor til hans mountainbike, men den er stadig i rigtig fin stand.</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+                    <p>
+
+                    </p>
+
+                    <p><a href="#ex10" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex10" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/Opslag/cykel.jpg"> </div>
+                            <div class="modal_tekst">
+                                <h2>Brugt cykel </h2>
+                                <p>
+                                    Min dreng er blevet for stor til hans mountainbike, men den er stadig i rigtig fin stand. Tænker nok der er en derude, som kunne bruge sådan en?
+                                    Den har 24 gear, og tilhørende lås.
+
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Eva Skipper</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="opslag_box">
+                <div class="opslag_billede"><a href="#ex10" rel="modal:open"><img src="Billeder/Opslag/garn.jpg"></a></div>
+                <div class="opslag_tekst">
+                    <h2> Garn </h2>
+                    <p> Jeg har simpelthen alt for meget garn, som jeg ikke får brugt. Så bare skriv!</p>
+                    <div class="dato">Oprettet d. 10/6 </div>
+                    <p>
+
+                    </p>
+
+                    <p><a href="#ex10" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                    <div id="ex10" class="modal">
+                        <div class="modal_header">
+                            <h2>TILBYDES!</h2>
+                        </div>
+                        <div class="modal_indhold">
+                            <div class="modal_billede"><img src="Billeder/Opslag/garn.jpg"> </div>
+                            <div class="modal_tekst">
+                                <h2> Garn </h2>
+                                <p>
+                                    Jeg har simpelthen alt for meget garn, som jeg ikke får brugt. Så bare skriv!
+                                </p>
+
+                                <div class="kontakt">
+                                    <h3>Grethe Birk Jakobsen</h3>
+                                    <p>Postnr: 8000 Aarhus </p>
+                                    <p>Telefon: +45 ** ** ** **</p>
+                                    <p>Email: *** @ ***.** </p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <a href="#" rel="modal:close"></a>
+
+                    </div>
+
+                </div>
 
             </div>
 
 
 
-            <!-----------------------------------------Footer------------------------------------->
+        </div>
 
-            <footer>
 
-                <div class="some">
-                    <div>
-                        <a href="https://www.facebook.com/ReUseAarhus/"><i class="fab fa-facebook-f"></i></a>
+
+
+
+
+
+
+
+
+        <div class="opslag_søger">
+
+            <div class="kategori_et">
+                <h2>SØGES!<span><a href="#"> + Tilføj opslag</a></span></h2>
+            </div>
+
+            <div class="opslag_flex">
+
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex11" rel="modal:open"><img src="Billeder/Opslag/potter.jpg"></a></div>
+                    <div class="opslag_tekst">
+                        <h2> Potter </h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p>Jeg skal bruge en hel del potter til et lille have projekt jeg har startet. Behøver ikke være i super stand!</p>
+
+                        <p><a href="#ex11" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex11" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/potter.jpg"> </div>
+                                <div class="modal_tekst">
+                                    <h2> Potter </h2>
+                                    <p>
+                                        Jeg skal bruge en hel del potter til et lille have projekt jeg har startet. Behøver ikke være i super stand!
+                                        <br><br>
+
+                                        Kontakt mig endelig vis du vil vide mere.
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>Hans Ulrik</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
                     </div>
 
-                    <div>
-                        <a href="https://www.instagram.com/explore/locations/720612896/reuse-aarhus/"><i class="fab fa-instagram"></i></a>
-                    </div>
-
-                    <div>
-                        <a href="https://www.youtube.com/user/aakvideosite"><i class="fab fa-youtube"></i></a>
-                    </div>
                 </div>
 
-                <div class="info">
-                    <div>
-                        <h2>Adresse</h2>
-                        <p>Jægergårdsgade 164 C.</p>
-                        <p>Aarhus C</p>
-                    </div>
-                    <div>
-                        <h2>Åbningstider</h2>
-                        <p>Kl. 12 - 17 hver dag</p>
-                        <p>*Der kan være andre åbningstider i forbindelse med helligdage*</p>
-                    </div>
-                    <div>
-                        <h2>Kontakt</h2>
-                        <p>Affaldvarme@Aarhus.dk</p>
-                        <p>Tlf: 89 40 15 00</p>
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex12" rel="modal:open"><img src="Billeder/Opslag/s%C3%B8gkurv.jpg"></a></div>
+                    <div class="opslag_tekst">
+                        <h2> Kurv søges</h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p>Leder efter en sivkurv, der er velegnet til picnic :) </p>
+
+                        <p><a href="#ex12" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex12" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/s%C3%B8gkurv.jpg"> </div>
+                                <div class="modal_tekst">
+                                    <h2>Kurv søges </h2>
+                                    <p>
+                                        Leder efter en sivkurv, der er velegnet til picnic :)
+
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>Tina Mortensen</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
                     </div>
 
                 </div>
 
-                <div class="copyright">
-                    <p>REUSE</p>
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex13" rel="modal:open"><img src="Billeder/Opslag/s%C3%B8glampe.jpg"></a></div>
+                    <div class="opslag_tekst">
+                        <h2> Olielampe</h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p>Jeg kunne vildt godt tænke mig en olielampe til mit havebord! Må gerne være gammel med patina, men jeg er interesseret i alt.
+                        </p>
+
+                        <p><a href="#ex13" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex13" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/s%C3%B8glampe.jpg"> </div>
+                                <div class="modal_tekst">
+                                    <h2>Olielampe</h2>
+                                    <p>
+                                        Jeg kunne vildt godt tænke mig en olielampe til mit havebord! Må gerne være gammel med patina, men jeg er interesseret i alt.
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>Klaus Hvelplund</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-            </footer>
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex14" rel="modal:open"><img src="Billeder/Opslag/kitchenknives.jpg"></a></div>
+                    <div class="opslag_tekst">
+                        <h2> Køkkenknive </h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p>
+                            Min søn skal snart flytte i egen lejlighed, og vi er ved at have samlet en god køkken-startpakke, men vi mangler nogle skarpe knive!
+                        </p>
 
-            <!-----------------------------------Footer slut------------------------------------->
+                        <p><a href="#ex14" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
 
+                        <div id="ex14" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/kitchenknives.jpg"> </div>
+                                <div class="modal_tekst">
+                                    <h2> Køkkenknive </h2>
+                                    <p>
+                                        Min søn skal snart flytte i egen lejlighed, og vi er ved at have samlet en god køkken-startpakke, men vi mangler nogle skarpe knive!
+
+                                        Kontakt os endelig!
+
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>Anton Berg</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex15" rel="modal:open"><img src="Billeder/Opslag/maling.jpg"></a></div>
+                    <div class="opslag_tekst">
+                        <h2>Alt slags maling </h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+
+                        <p>
+                            Hvis der har noget akrylmaling eller akvarelfarver som de gerne vil dele, så vil jeg meget gerne byde ind på dem! :)
+                        </p>
+
+
+                        <p><a href="#ex15" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex15" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/maling.jpg"> </div>
+                                <div class="modal_tekst">
+                                    <h2> Alt slags maling </h2>
+                                    <p>
+                                        Hvis der har noget akrylmaling eller akvarelfarver som de gerne vil dele, så vil jeg meget gerne byde ind på dem! :)
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>Charlotte morgenstern</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex16" rel="modal:open"><img src="Billeder/Opslag/paller.jpg"></a></div>
+                    <div class="opslag_tekst">
+                        <h2> Paller til projekt </h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p>
+                            Mine roomies og jeg leder efter nogle træpaller til et lille DIY-Projekt.
+                        </p>
+
+                        <p><a href="#ex16" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex16" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/paller.jpg"> </div>
+                                <div class="modal_tekst">
+                                    <h2> Paller </h2>
+                                    <p>
+                                        Mine roomies og jeg leder efter nogle træpaller til et lille DIY-Projekt.
+
+                                        Kontakt os gerne tak!
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>Anders Poulsen</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex17" rel="modal:open"><img src="Billeder/Opslag/fodbold.jpg"></a></div>
+                    <div class="opslag_tekst">
+                        <h2> Fodbolde? </h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p>
+                            Jeg har sagt ja til at træne nogle små miniputter i fodbold, men vi kunne godt bruge nogle flere bolde.
+                        </p>
+
+                        <p><a href="#ex17" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex17" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/fodbold.jpg"> </div>
+                                <div class="modal_tekst">
+                                    <h2>Fodbolde? </h2>
+                                    <p>
+                                        Jeg har sagt ja til at træne nogle små miniputter i fodbold, men vi kunne godt bruge nogle flere bolde.
+                                        Hvis der sidder nogle derude, med en bold de gerne vil donere, så kontakt mig endelig!
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>Hans Vium Skovsgaard</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex18" rel="modal:open"><img src="Billeder/Opslag/have-v%C3%A6rkt%C3%B8j.jpg"></a></div>
+                    <div class="opslag_tekst">
+                        <h2>Haveredskaber </h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p> Min kæreste og jeg har lige købt en lille kolonihave, og vi mangler en masse haveredskaber.</p>
+
+                        <p><a href="#ex18" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex18" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/have-v%C3%A6rkt%C3%B8j.jpg"> </div>
+                                <div class="modal_tekst">
+                                    <h2> Haveredskaber </h2>
+                                    <p>
+                                        Min kæreste og jeg har lige købt en lille kolonihave, og vi mangler en masse haveredskaber.
+                                        Ville lige prøve at spørge herinde, inden vi tager ud og køber noget selv!
+
+                                        Vi er stort set interesseret i hvad som helst, men mangler primært rive og spade.
+
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>Trine Dahl Andersen </h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex19" rel="modal:open"><img src="Billeder/Opslag/clamps.jpg"></a></div>
+                    <div class="opslag_tekst">
+                        <h2> Tøjklemme </h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p>
+                            Hej!
+                            På vejene af min opgang, søger jeg tøjklemmer til vores vaskekælder.
+                        </p>
+
+                        <p><a href="#ex19" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex19" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/clamps.jpg"> </div>
+                                <div class="modal_tekst">
+                                    <h2> Tøjklemme </h2>
+                                    <p>
+                                        Hej!
+                                        På vejene af min opgang, søger jeg tøjklemmer til vores vaskekælder.
+
+                                        Hilsen Jonas
+
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3> Jonas Kærup</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex20" rel="modal:open"><img src="Billeder/Opslag/brush.jpg"></a></div>
+                    <div class="opslag_tekst">
+                        <h2>Brugte pensler</h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p>
+                            Jeg står for et lille kunst-begynderhold på aftenskole i Aarhus, og jeg står og mangler nogle flere pensler i alle størrelser.
+                        </p>
+
+                        <p><a href="#ex20" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex20" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/brush.jpg"> </div>
+                                <div class="modal_tekst">
+                                    <h2>Brugte pensler </h2>
+                                    <p>
+                                        Hej!
+                                        Jeg står for et lille kunst-begynderhold på aftenskole i Aarhus, og jeg står og mangler nogle flere pensler i alle størrelser.
+                                        Krydser fingre!
+
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>Irene Vesterlund</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex20" rel="modal:open"><img src="Billeder/Opslag/ketcher.png"></a></div>
+                    <div class="opslag_tekst">
+                        <h2>Tennis ketcher</h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p>
+                            Min søn vil gerne starte til tennis, og vi er derfor på udkig efter en ketcher i børnestørrelse-
+                            alderen 8-11 år.
+                        </p>
+
+                        <p><a href="#ex21" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex21" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/ketcher.png"> </div>
+                                <div class="modal_tekst">
+                                    <h2>Tennis ketcher </h2>
+                                    <p>
+                                        Min søn vil gerne starte til tennis, og vi er derfor på udkig efter en ketcher i børnestørrelse-
+                                        alderen 8-11 år.
+                                        Skriv endelig!
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>Mogens Hansen</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="opslag_box">
+                    <div class="opslag_billede"><a href="#ex20" rel="modal:open"><img src="Billeder/Opslag/sk%C3%B8jter.png"></a></div>
+                    <div class="opslag_tekst">
+                        <h2>Skøjter?</h2>
+                        <div class="dato">Oprettet d. 10/6 </div>
+                        <p>
+                            Jeg vil vildt gerne prøve at stå på skøjter til vinter, og søger derfor et par. Omkring størrelse 43.
+                        </p>
+
+                        <p><a href="#ex22" rel="modal:open"><i class="fas fa-arrow-circle-right"></i></a></p>
+
+                        <div id="ex22" class="modal">
+                            <div class="modal_header">
+                                <h2>Søges!</h2>
+                            </div>
+                            <div class="modal_indhold">
+                                <div class="modal_billede"><img src="Billeder/Opslag/sk%C3%B8jter.png"> </div>
+                                <div class="modal_tekst">
+                                    <h2>Skøjter? </h2>
+                                    <p>
+                                        Jeg vil vildt gerne prøve at stå på skøjter til vinter, og søger derfor et par. Omkring størrelse 43.
+                                        Tak på forhånd!
+                                    </p>
+
+                                    <div class="kontakt">
+                                        <h3>SIGGIDJ</h3>
+                                        <p>Postnr: 8000 Aarhus </p>
+                                        <p>Telefon: +45 ** ** ** **</p>
+                                        <p>Email: *** @ ***.** </p>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <a href="#" rel="modal:close"></a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-----------------------------------------Footer------------------------------------->
+
+    <footer>
+
+        <div class="some">
+            <div>
+                <a href="https://www.facebook.com/ReUseAarhus/"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div>
+                <a href="https://www.instagram.com/explore/locations/720612896/reuse-aarhus/"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div>
+                <a href="https://www.youtube.com/user/aakvideosite"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="info">
+            <div>
+                <h2>Adresse</h2>
+                <p>Jægergårdsgade 164 C.</p>
+                <p>Aarhus C</p>
+            </div>
+            <div>
+                <h2>Åbningstider</h2>
+                <p>Kl. 12 - 17 hver dag</p>
+                <p>*Der kan være andre åbningstider i forbindelse med helligdage*</p>
+            </div>
+            <div>
+                <h2>Kontakt</h2>
+                <p>Affaldvarme@Aarhus.dk</p>
+                <p>Tlf: 89 40 15 00</p>
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            <p>REUSE</p>
+        </div>
+
+    </footer>
+
+    <!-----------------------------------Footer slut------------------------------------->
 
 </body>
 

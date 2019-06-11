@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*------------------------ Fonts ---------------------------*/
+
+@font-face {
+    font-family: 'Overskrift';
+    src: url('../Fonts/Loew-Heavy.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Tekst';
+    src: url('../Fonts/Loew-Regular.otf') format('opentype');
+}
+
+/*-------------------- Keyframes ---------------------------*/
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadein {
+
+    /* Firefox */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadein {
+
+    /* Opera */
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    height: 100%;
+    max-width: 100%;
+}
+
+/*--------------- Navigationsbar styling -----------------*/
+
+.topnav {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    display: none;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.topnav a img {
+    width: 120px;
+}
+
+.topnav #myLinks {
+    display: none;
+    text-transform: uppercase;
+}
+
+.topnav #myLinks a {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.topnav a {
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    font-family: overskrift;
+}
+
+.topnav a.icon {
+    display: block;
+    position: absolute;
+    font-size: 40px;
+    right: 0;
+    top: 0;
+    border-bottom: none;
+}
+
+
+.topnav div a:hover {
+    background-color: #074f4b;
+}
+
+.active {
+    background-color: rgba(0, 0, 0, .0);
+    color: white;
+}
+
+nav {
+    position: fixed;
+    justify-content: center;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    transition: .8s;
+    z-index: 999999;
+
+    animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Firefox */
+    -webkit-animation: fadein 2s;
+    /* Safari and Chrome */
+    -o-animation: fadein 2s;
+    /* Opera */
+}
+
+/*------------- Navigations styling med scroll effekt ----------------- */
+
+nav.menu_baggrund {
+    background: rgba(0, 0, 0, .8);
+    padding: 5px 0px;
+}
+
+
+nav.menu_baggrund ul li a {
+    color: white;
+}
+
+nav ul {
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 2px;
+}
+
+nav ul li .tt {
+    font-size: 20px;
+    line-height: 80px;
+    color: #262626;
+    padding: 5px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    font-family: Overskrift;
+}
+
+nav ul li img {
+    line-height: 20px;
+}
+
+nav.menu_baggrund nav ul li a {
+    color: #fff;
+}
+
+nav ul li .tt.active {
+    border-bottom: 1px solid #fff;
+}
+
+nav ul li .tt:hover {
+
+    color: #fff;
+    background: rgba(0, 0, 0, .8);
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+}
+
+nav.menu_baggrund ul li .tt.active,
+nav.menu_baggrund ul li .tt:hover {
+    color: #fff;
+    background: #008f8a;
+    transition: 1s;
+    border-radius: 0px 15px 0px 15px;
+    border: 1px solid #fff;
+}
+
+nav.menu_baggrund ul li img {
+    margin-bottom: -100px;
+}
+
+.lille_logo {
+    width: 110px;
+    padding: 10px 30px;
+    transition: 0.8s;
+
+}
+
+.lille_logo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+nav ul li ul {
+    position: absolute;
+    left: 1%;
+    display: none;
+    background: rgba(0, 0, 0, .8);
+    margin-top: -18px;
+    font-size: 12px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav ul li ul li {
+    text-align: center;
+    padding: 5px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+nav ul li ul li a {
+    color: #fff;
+    font-family: Overskrift;
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li:hover > ul,
+nav ul li ul:hover {
+    position: relative;
+    display: block;
+    color: #fff;
+}
+
+nav ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+nav.menu_baggrund ul li ul {
+    background-color: rgb(0, 143, 138);
+    left: 1%;
+    margin-top: -18px;
+    font-size: 12px;
+    width: 98.5%;
+    color: #fff;
+}
+
+nav.menu_baggrund ul li ul li:hover {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/*------------- Navigations styling med scroll effekt slut ----------------- */
+
+.section1 {
+    background-image:  url(../Billeder/orange-container.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px;
+    background: rgba(0,0,0,.9);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    
+}
+
+.box h2 {
+    color: white;
+    text-align: center;
+    font-family: Overskrift
+}
+
+.box p {
+    color: white;
+    font-family: tekst;
+    padding-bottom: 50px;
+    
+}
+
+.box .inputBox {
+    position: relative;
+    font-family: tekst;
+}
+
+.box .inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.box .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s; 
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #074f4b;
+    font-size: 13px;
+}
+
+.box input[type="submit"], .box input[type="button"] {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #074f4b;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+
+
+/*-----------------------------FOOTER--------------------------------*/
+
+
+footer {
+    min-height: 450px;
+    background-color: #262626;
+    color: #fff;
+    font-family: tekst;
+}
+
+.some {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.some div {
+    display: flex;
+    background-color: #074f4b;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    justify-content: center;
+    margin: 50px;
+}
+
+
+.some a {
+    position: relative;
+    top: 15%;
+    text-decoration: none;
+    color: #262626;
+    font-size: 50px;
+}
+
+.some i {
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.info div {
+    width: 320px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.info h2 {
+    letter-spacing: 1.5px;
+    font-size: 30px;
+    font-family: Overskrift;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.info p {
+    letter-spacing: 1px;
+}
+
+.copyright {
+    text-align: center;
+    font-family: Overskrift;
+    font-size: 20px;
+    padding: 5px;
+    letter-spacing: 5px;
+}
+
+/*-----------------------------FOOTER slut--------------------------------*/
