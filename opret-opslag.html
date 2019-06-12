@@ -58,11 +58,86 @@
         </header>
 
     </section>
-    
-    
+
+
     <section class="opret_opslag">
-    
+
+        <div class="opslag_box">
+
+            <h1> OPRET OPSLAG </h1>
+
+           <p class="udfyld">Felter makeret med * er påkrævet. </p>
+           
+            <form>
+
+                <div class="type">
+
+                    <h3>Vælg hvilken type opslag du vil oprette *</h3>
+
+                    <input type="radio" name="type" required=""> Tilbyder
+                    <input type="radio" name="type" required=""> Søger
+
+                </div>
+
+                <div class="titel">
+                    <h3>Angiv hvilken titel dit opslag skal have *</h3>
+                    <input type="text" placeholder="Indsæt titel" required="" maxlength="30">
+                </div>
+
+                <div class="beskrivelse">
+                    <h3>Beskriv den/de ting du tilbyder eller søger</h3>
+                    <textarea name="" placeholder="Indsæt beskrivelse" maxlength="350"></textarea>
+                </div>
+
+                <div class="postnr">
+                    <h3>Angiv dine kontaktoplysninger</h3>
+                    <input type="text" placeholder="Post nummer">
+                </div>
+
+                <div class="email">
+                    <input type="email" placeholder="Email adresse" required=""> *
+                </div>
+
+                <div class="telefon">
+                    <input type="text" placeholder="Telefon nummer">
+                </div>
+
+                <div class="upload">
+                    <h3>Upload et billede du vil vedhæfte opslaget</h3>
+
+                    <input type="button" id="btnFileUpload" value="Vælg billede" />
+                    <span id="spnFilePath"></span>
+                    <input type="file" id="FileUpload1" style="display: none" />
+
+                </div>
+
+                <div class="opret">
+                    <input type="submit" value="Opret dit opslag">
+                    <p>Vi forbeholder os retten til at slette dit opslag hvis vi finder det upassende</p>
+                </div>
+                
+
+            </form>
+
+        </div>
+
     </section>
+
+
+    <script type="text/javascript">
+        $(function() {
+            var fileupload = $("#FileUpload1");
+            var filePath = $("#spnFilePath");
+            var button = $("#btnFileUpload");
+            button.click(function() {
+                fileupload.click();
+            });
+            fileupload.change(function() {
+                var fileName = $(this).val().split('\\')[$(this).val().split('\\').length - 1];
+                filePath.html("<b> </b>" + fileName);
+            });
+        });
+    </script>
 
 
     <footer>
