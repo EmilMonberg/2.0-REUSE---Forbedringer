@@ -99,7 +99,7 @@ body {
     color: white;
     padding: 10px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     display: block;
     font-family: overskrift;
 }
@@ -167,10 +167,10 @@ nav ul li {
 }
 
 nav ul li .tt {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 80px;
     color: #262626;
-    padding: 5px 30px;
+    padding: 5px 25px;
     text-decoration: none;
     text-transform: uppercase;
     transition: .5s;
@@ -446,7 +446,7 @@ footer {
 
 /*-------------------------------------------MEDIA QUERY-----------------------------------*/
 
-@media (max-width: 1010px) {
+@media (max-width: 1050px) {
 
     nav {
         display: none;
